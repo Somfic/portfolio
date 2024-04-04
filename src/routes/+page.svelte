@@ -17,8 +17,8 @@
 <div class="hero">
 	<div class="nav">
 		<a href="#me">me</a>
-		<a href="#projects">projects</a>
-		<a href="#contact">contact</a>
+		<a href="#">projects</a>
+		<a href="#">contact</a>
 	</div>
 	<div class="i-am">
 		<h1>Hi, I am</h1>
