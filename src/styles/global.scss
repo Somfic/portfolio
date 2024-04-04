@@ -1,0 +1,41 @@
+@import 'theme';
+
+:global(html,
+	body,
+	main) {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	font-family: $font;
+	background: transparent;
+	color: $foreground;
+	margin: 0;
+}
+
+:global(main) {
+	background-color: black;
+}
+
+:global(style) {
+	display: none;
+}
+
+:global(button, p) {
+	margin: 0;
+}
+
+:global(::-webkit-scrollbar) {
+	width: 3px;
+	height: 3px;
+}
+
+:global(::-webkit-scrollbar-track) {
+	margin: 5px;
+	background: transparent;
+}
+
+:global(::-webkit-scrollbar-thumb) {
+	background: $foreground-muted;
+	border-radius: 100px;
+
+}
