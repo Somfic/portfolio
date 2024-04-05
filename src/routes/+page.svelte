@@ -80,6 +80,7 @@
 	<div class="projects">
 		<HorizontalScroll>
 			<Section>
+				<Orb x={100} y={0} width={500} height={300} />
 				<h2 id="projects">My projects</h2>
 				<p>I have a few projects that I am proud of.</p>
 			</Section>
