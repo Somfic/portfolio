@@ -7,6 +7,8 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import HorizontalScroll from '$lib/components/HorizontalScroll.svelte';
+	import YouTube from '$lib/components/YouTube.svelte';
+	import FadingText from '$lib/components/FadingText.svelte';
 
 	let fullCycle = $state(false);
 	let hasScrolled = $state(false);
@@ -56,13 +58,13 @@
 	</div>
 </div>
 <div class="content">
-	<Section horizontal>
-		<Orb x={50} y={0} width={500} height={300} />
-		<Orb x={-50} y={100} width={400} height={200} />
+	<Section horizontal swooshbottom fade>
+		<Orb x={40} y={25} width={400} height={300} />
+		<Orb x={-50} y={75} width={400} height={200} />
 		<div>
-			<h2 id="me">Hallo!</h2>
+			<h2 id="me"><FadingText words={['Hallo!', 'Ciao!', 'Hello!']} /></h2>
 			<p>
-				I'm Lucas - a software engineer who loves blending code with creative design and artistic
+				I’m Lucas — a software engineer who loves blending code with creative design and artistic
 				flair.
 			</p>
 			<p>
@@ -84,32 +86,31 @@
 				<h2 id="projects">My projects</h2>
 				<p>I have a few projects that I am proud of.</p>
 			</Section>
-			<Section horizontal>
-				<h2>EliteAPI</h2>
-				<Image
-					size={500}
-					src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
-				/>
-			</Section>
 			<Section>
-				<h2>EliteAPI</h2>
+				<Orb x={40} y={0} width={500} height={300} />
+				<Orb x={-40} y={60} width={500} height={500} />
+				<Orb x={50} y={100} width={300} height={200} />
 				<Image
+					size={9999}
 					src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
 				/>
-			</Section>
-			<Section>
-				<h2>EliteAPI</h2>
-				<Image
-					src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
-				/>
-			</Section>
-			<Section>
-				<h2>EliteAPI</h2>
-				<Image
-					src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
-				/>
+				<p>
+					EliteAPI is a .NET library for the game <i>Elite: Dangerous</i>. It allows developers to
+					hook into in-game events, allowing for automation and hardware indication of in-game
+					state.
+				</p>
+				<p>
+					See this showcase video by
+					<a href="https://www.youtube.com/@andrewsmith6350">Andrew Smith</a>
+					for an example of what can be done with EliteAPI.
+				</p>
+
+				<YouTube src="https://www.youtube.com/embed/RK78oft6KJM?si=EVUOzf-Pu_kA1sfz" />
 			</Section>
 		</HorizontalScroll>
+		<Section>
+			<h1>Hello</h1>
+		</Section>
 	</div>
 </div>
 
@@ -178,6 +179,7 @@
 			height: 100px;
 			opacity: 0;
 			transition: opacity 2s ease-in-out;
+			//margin-bottom: -200px;
 
 			&.show {
 				opacity: 0.5;

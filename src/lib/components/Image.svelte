@@ -14,9 +14,9 @@
 	@import '../../styles/theme.scss';
 
 	img {
-		border-radius: 25px;
-		border: 10px solid rgba(255, 255, 255, 0.1);
-		opacity: 0.8;
+		border-radius: 40px;
+		border: 15px solid rgba(255, 255, 255, 0.05);
+
 		object-fit: cover;
 		max-width: 100%;
 		box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);

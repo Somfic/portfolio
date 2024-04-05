@@ -8,7 +8,8 @@ $background-frosted: rgba(255, 255, 255, 0.025);
 $foreground: rgb(255, 255, 238);
 $foreground-muted: #999999;
 
-$accent: #AD50A3;
+$accent: #cf8cf4;
+$accent-muted: lighten($accent, 10%);
 
 $border-width: 2px;
 $border-color: rgba(255, 255, 255, 0.25);

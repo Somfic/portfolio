@@ -24,6 +24,15 @@
 	display: none;
 }
 
+:global(a) {
+	color: $accent;
+	transition: color 0.2s ease-in-out;
+
+	&:hover {
+		color: $accent-muted;
+	}
+}
+
 :global(::-webkit-scrollbar) {
 	width: 3px;
 	height: 3px;
@@ -40,11 +49,20 @@
 
 }
 
+:global(h1) {
+	h1 {
+		font-size: 48px;
+		line-height: 60px;
+		font-weight: 700;
+		margin-bottom: 24px;
+	}
+}
+
 :global(h2) {
 	font-size: 32px;
 	line-height: 36px;
 	letter-spacing: -0.48px;
-	margin-bottom: 24px;
+	margin-bottom: 36px;
 }
 
 :global(h3) {

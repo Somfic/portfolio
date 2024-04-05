@@ -1,11 +1,25 @@
 <script lang="ts">
-	import Orb from './Orb.svelte';
+	import { inview } from 'svelte-inview';
 
 	export let horizontal = false;
+
+	export let swooshbottom = false;
+	export let fade = false;
+
+	let hidden = true;
 </script>
 
 <div class="section-wrapper">
-	<div class="section" class:horizontal>
+	<div
+		class="section"
+		class:horizontal
+		class:swooshbottom
+		class:fade
+		use:inview={{ threshold: 0.5 }}
+		on:inview_enter={() => (hidden = false)}
+		on:inview_leave={() => (hidden = true)}
+		class:visible={!hidden}
+	>
 		<slot />
 	</div>
 </div>
@@ -21,6 +35,9 @@
 		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
+		overflow-y: scroll;
+		padding-top: 80px;
+		padding-bottom: 80px;
 	}
 
 	.section {
@@ -44,15 +61,25 @@
 			display: flex;
 			gap: 40px;
 		}
+	}
 
-		@keyframes wiggle {
-			0% {
-				transform: rotate(-2deg);
-			}
+	.section-wrapper,
+	.section {
+		transition:
+			opacity 1s ease-out,
+			transform 1s ease-out;
 
-			100% {
-				transform: rotate(2deg);
-			}
+		&.visible {
+			opacity: 1;
+			transform: none;
 		}
+	}
+
+	.swooshbottom {
+		transform: translateY(100px);
+	}
+
+	.fade {
+		opacity: 0;
 	}
 </style>

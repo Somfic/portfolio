@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	export let words: string[] = [];
 
 	let elements: HTMLElement[] = [];
@@ -13,6 +15,12 @@
 
 	export let fullCycle = false;
 
+	onMount(() => {
+		setTimeout(() => {
+			advance();
+		}, 3500);
+	});
+
 	function advance() {
 		index++;
 		if (index >= words.length) {
@@ -25,9 +33,14 @@
 		activeIndex = index;
 		nextIndex = (index + 1) % words.length;
 		nextNextIndex = (index + 2) % words.length;
-	}
 
-	setInterval(advance, 2500);
+		setTimeout(
+			() => {
+				advance();
+			},
+			activeIndex == 0 ? 3500 : 1750
+		);
+	}
 </script>
 
 <h1>
@@ -40,6 +53,7 @@
 			class:active={activeIndex == i}
 			class:next={nextIndex == i}
 			class:nextNext={nextNextIndex == i}
+			class:important={activeIndex == 0}
 		>
 			{word}
 		</span>
@@ -53,7 +67,8 @@
 		opacity: 0;
 		transition:
 			transform 1s ease-in-out,
-			opacity 1s ease-in-out;
+			opacity 1s ease-in-out,
+			filter 1s ease-in-out;
 		display: flex;
 		flex-direction: column;
 		position: absolute;
@@ -64,28 +79,42 @@
 	$delta: 2em;
 
 	.previousPrevious {
-		opacity: 0;
 		transform: translateY(-$delta * 2);
 	}
 
 	.previous {
-		opacity: 0.25;
 		transform: translateY(-$delta);
 	}
 
 	.active {
-		opacity: 1;
 		transform: translateY(0);
 	}
 
 	.next {
-		opacity: 0.25;
 		transform: translateY($delta);
 	}
 
 	.nextNext {
-		opacity: 0;
 		transform: translateY($delta * 2);
+	}
+
+	.previousPrevious,
+	.nextNext {
+		opacity: 0;
+	}
+
+	.previous,
+	.next {
+		opacity: 0.25;
+	}
+
+	.active {
+		opacity: 1;
+	}
+
+	.important.active {
+		filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.5))
+			drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 	}
 
 	h1 {
