@@ -7,9 +7,13 @@
 	flex-direction: column;
 	flex-grow: 1;
 	font-family: $font;
-	background: transparent;
+	background: black;
 	color: $foreground;
 	margin: 0;
+	overflow-x: hidden;
+	scroll-snap-type: y mandatory;
+	width: 100vw;
+
 }
 
 :global(main) {
@@ -18,10 +22,6 @@
 
 :global(style) {
 	display: none;
-}
-
-:global(button, p) {
-	margin: 0;
 }
 
 :global(::-webkit-scrollbar) {
@@ -38,4 +38,22 @@
 	background: $foreground-muted;
 	border-radius: 100px;
 
+}
+
+:global(h2) {
+	font-size: 32px;
+	line-height: 36px;
+	letter-spacing: -0.48px;
+	margin-bottom: 24px;
+}
+
+:global(h3) {
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 400;
+	color: $foreground-muted;
+}
+
+:global(p) {
+	margin: 20px 0;
 }
