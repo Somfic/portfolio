@@ -84,9 +84,10 @@
 				<h2 id="projects">My projects</h2>
 				<p>I have a few projects that I am proud of.</p>
 			</Section>
-			<Section>
+			<Section horizontal>
 				<h2>EliteAPI</h2>
 				<Image
+					size={500}
 					src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
 				/>
 			</Section>
