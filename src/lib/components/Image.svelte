@@ -21,6 +21,8 @@
 		max-width: 100%;
 		box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
 
+		opacity: 0.99;
+
 		&.wiggle {
 			animation: wiggle 10s ease-in-out infinite alternate;
 		}

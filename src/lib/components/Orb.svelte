@@ -67,7 +67,7 @@
 			var(--color3) 50% 75%,
 			var(--color4) 75% 100%
 		);
-		opacity: 0.5;
+		opacity: 0.8;
 
 		// Slowly pulsate and rotate the orb
 		animation:
