@@ -29,13 +29,12 @@
 
 	.section-wrapper {
 		position: relative;
-		height: 100vh;
-		width: 100vw;
+		min-height: 100vh;
+		//width: 100vw;
 		display: flex;
 		flex-shrink: 0;
 		align-items: center;
 		justify-content: center;
-		overflow-y: scroll;
 		padding-top: 80px;
 		padding-bottom: 80px;
 	}
