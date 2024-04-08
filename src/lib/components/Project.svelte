@@ -31,15 +31,14 @@
 	<div class="card big links" class:expand>
 		<div class="content">
 			<h3>Links</h3>
-			<a href={repository?.url}><GitHub />repo</a>
-			<a href={repository?.homepage}><ExternalLink /> docs</a>
+			<a href={repository?.html_url}><GitHub />repo</a>
+			<a href={repository?.homepage}><ExternalLink />docs</a>
 		</div>
 	</div>
 	<div class="card big stats" class:expand>
 		<div class="content">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut accusantium voluptas sed esse
-			cumque atque cupiditate sit explicabo incidunt laboriosam? Odio expedita id praesentium dolor
-			quod beatae, voluptate nisi non!
+			<h3>Stargazer</h3>
+			<p class="pill">{repository?.stargazers_count}</p>
 		</div>
 	</div>
 

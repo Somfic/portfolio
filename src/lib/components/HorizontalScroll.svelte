@@ -17,8 +17,8 @@
 				trigger: scrollWrapper,
 				pin: true,
 				scrub: 1,
-				//snap: 1 / (sections.length - 1),
-				end: `${scrollWrapper.children.length * window.outerWidth * 0.5}px`
+				snap: 1 / (sections.length - 1),
+				end: `${scrollWrapper.children.length * window.outerWidth * 0.25}px`
 			}
 		});
 	});

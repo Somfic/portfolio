@@ -10,6 +10,7 @@
 	import YouTube from '$lib/components/YouTube.svelte';
 	import FadingText from '$lib/components/FadingText.svelte';
 	import Project from '$lib/components/Project.svelte';
+	import GitHubActivity from '$lib/components/GitHubActivity.svelte';
 
 	let fullCycle = $state(false);
 	let hasScrolled = $state(false);
@@ -59,6 +60,9 @@
 	</div>
 </div>
 <div class="content">
+	<Section>
+		<GitHubActivity user="somfic" />
+	</Section>
 	<Section horizontal swooshbottom fade>
 		<Orb x={40} y={25} width={400} height={300} />
 		<Orb x={-50} y={75} width={400} height={200} />
@@ -87,33 +91,34 @@
 		</Section>
 		<HorizontalScroll>
 			<Section>
-				<Orb x={40} y={0} width={500} height={300} />
-				<Orb x={-40} y={60} width={500} height={500} />
-				<Orb x={50} y={100} width={400} height={400} />
-				<Project
-					repo="somfic/eliteapi"
-					languages={['C#']}
-					bigImages={['projects/eliteapi/social.png']}
-					smallImages={['projects/eliteapi/elite.png', 'projects/eliteapi/dotnet.png']}
-				/>
+				<div class="project">
+					<Project
+						repo="somfic/eliteapi"
+						languages={['C#']}
+						bigImages={['projects/eliteapi/social.png']}
+						smallImages={['projects/eliteapi/elite.png', 'projects/eliteapi/dotnet.png']}
+					/>
+				</div>
 			</Section>
 			<Section>
-				<Orb x={40} y={0} width={500} height={300} />
-				<Orb x={-40} y={60} width={500} height={500} />
-				<Orb x={50} y={100} width={400} height={400} />
-				<Project
-					repo="somfic/eliteva"
-					languages={['C#']}
-					bigImages={['projects/eliteva/social.png']}
-					smallImages={['projects/eliteva/elite.png']}
-				/>
+				<div class="project">
+					<Project
+						repo="somfic/eliteva"
+						languages={['C#']}
+						bigImages={['projects/eliteva/social.png']}
+						smallImages={['projects/eliteva/elite.png']}
+					/>
+				</div>
 			</Section>
 		</HorizontalScroll>
 		<Section>
-			<h1>Hello</h1>
+			<h1>My GitHub</h1>
 		</Section>
 	</div>
 </div>
+
+<!-- TODO: LAST ACTIVITY PER PROJECT (PUSHED 23 MINUTES AGO) -->
+<!-- TODO: GITHUB ACTICITY FEED: CREATED SOMFIC/VLA 3 MINUTES AGO -->
 
 <style lang="scss">
 	@import '../styles/theme.scss';

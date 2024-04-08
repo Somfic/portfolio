@@ -30,7 +30,7 @@
 	.section-wrapper {
 		position: relative;
 		min-height: 100vh;
-		width: 100vw;
+		min-width: 100vw;
 		display: flex;
 		flex-shrink: 0;
 		align-items: center;
