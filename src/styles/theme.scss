@@ -3,15 +3,15 @@
 $background-ui: #0f0f0f;
 $background-dark: #1f1f1f;
 $background-light: #343434;
-$background-frosted: rgba(255, 255, 255, 0.025);
+$background-frosted: rgba(255, 255, 255, 0.1);
 
 $foreground: rgba(255, 255, 238, 0.95);
-$foreground-muted: #999999;
+$foreground-muted: rgba(255, 255, 238, 0.5);
 
 $accent: #cf8cf4;
 $accent-muted: lighten($accent, 10%);
 
-$border-width: 2px;
+$border-width: 3px;
 $border-color: rgba(255, 255, 255, 0.25);
 $border-radius: 1rem;
 $border: $border-width solid $border-color;

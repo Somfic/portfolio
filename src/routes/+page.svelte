@@ -9,6 +9,7 @@
 	import HorizontalScroll from '$lib/components/HorizontalScroll.svelte';
 	import YouTube from '$lib/components/YouTube.svelte';
 	import FadingText from '$lib/components/FadingText.svelte';
+	import Project from '$lib/components/Project.svelte';
 
 	let fullCycle = $state(false);
 	let hasScrolled = $state(false);
@@ -80,33 +81,34 @@
 		<Image size={333} src="/me.jpeg" wiggle />
 	</Section>
 	<div class="projects">
-		<!-- <HorizontalScroll> -->
 		<Section>
-			<Orb x={-20} y={0} width={900} height={800} />
 			<h2 id="projects">My projects</h2>
 			<p>I have a few projects that I am proud of.</p>
 		</Section>
-		<Section>
-			<Orb x={40} y={0} width={500} height={300} />
-			<Orb x={-40} y={60} width={500} height={500} />
-			<Orb x={50} y={100} width={400} height={400} />
-			<Image
-				size={9999}
-				src="https://repository-images.githubusercontent.com/151841516/4aba5fc8-b4d1-4815-978c-7bb8cfdcbfa7"
-			/>
-			<p>
-				EliteAPI is a .NET library for the game <i>Elite: Dangerous</i>. It allows developers to
-				hook into in-game events, allowing for automation and hardware indication of in-game state.
-			</p>
-			<p>
-				See this showcase video by
-				<a href="https://www.youtube.com/@andrewsmith6350">Andrew Smith</a>
-				for an example of what can be done with EliteAPI.
-			</p>
-
-			<YouTube src="https://www.youtube.com/embed/RK78oft6KJM?si=EVUOzf-Pu_kA1sfz"  />
-		</Section>
-		<!-- </HorizontalScroll> -->
+		<HorizontalScroll>
+			<Section>
+				<Orb x={40} y={0} width={500} height={300} />
+				<Orb x={-40} y={60} width={500} height={500} />
+				<Orb x={50} y={100} width={400} height={400} />
+				<Project
+					repo="somfic/eliteapi"
+					languages={['C#']}
+					bigImages={['projects/eliteapi/social.png']}
+					smallImages={['projects/eliteapi/elite.png', 'projects/eliteapi/dotnet.png']}
+				/>
+			</Section>
+			<Section>
+				<Orb x={40} y={0} width={500} height={300} />
+				<Orb x={-40} y={60} width={500} height={500} />
+				<Orb x={50} y={100} width={400} height={400} />
+				<Project
+					repo="somfic/eliteva"
+					languages={['C#']}
+					bigImages={['projects/eliteva/social.png']}
+					smallImages={['projects/eliteva/elite.png']}
+				/>
+			</Section>
+		</HorizontalScroll>
 		<Section>
 			<h1>Hello</h1>
 		</Section>
