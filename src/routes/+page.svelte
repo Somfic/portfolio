@@ -63,7 +63,7 @@
 		<Orb x={40} y={25} width={400} height={300} />
 		<Orb x={-50} y={75} width={400} height={200} />
 		<div>
-			<h2 id="me"><FadingText words={['`Hoi`!', 'Ciao!', 'Hello!']} /></h2>
+			<h2 id="me"><FadingText words={['Hoi!', 'Ciao!', 'Hello!']} /></h2>
 			<p>
 				I’m Lucas — a software engineer who loves blending code with creative design and artistic
 				flair.
