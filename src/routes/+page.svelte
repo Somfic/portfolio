@@ -60,9 +60,6 @@
 	</div>
 </div>
 <div class="content">
-	<Section>
-		<GitHubActivity user="somfic" />
-	</Section>
 	<Section horizontal swooshbottom fade>
 		<Orb x={40} y={25} width={400} height={300} />
 		<Orb x={-50} y={75} width={400} height={200} />
@@ -115,6 +112,11 @@
 			<h1>My GitHub</h1>
 		</Section>
 	</div>
+	<Section swooshbottom fade>
+		<Orb x={-40} y={2} width={500} height={300} />
+		<Orb x={0} y={75} width={500} height={500} />
+		<GitHubActivity user="somfic" />
+	</Section>
 </div>
 
 <!-- TODO: LAST ACTIVITY PER PROJECT (PUSHED 23 MINUTES AGO) -->

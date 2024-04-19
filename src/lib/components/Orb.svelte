@@ -21,7 +21,7 @@
 	style:--top={yPx}
 	style:left={xPx}
 	style:--height={heightPx}
-	use:inview={{ threshold: 0.5 }}
+	use:inview={{ threshold: 0 }}
 	on:inview_enter={() => (hidden = false)}
 	on:inview_leave={() => (hidden = true)}
 	class:visible={!hidden}
