@@ -48,7 +48,7 @@
 		font-size: 18px;
 		line-height: 28px;
 		letter-spacing: -0.16px;
-		max-width: 800px;
+		max-width: 900px;
 
 		&.horizontal {
 			flex-direction: row;

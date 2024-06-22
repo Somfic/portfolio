@@ -11,11 +11,14 @@
 	import FadingText from '$lib/components/FadingText.svelte';
 	import Project from '$lib/components/Project.svelte';
 	import GitHubActivity from '$lib/components/GitHubActivity.svelte';
+	import Skull from '$lib/components/Skull.svelte';
+	import { Canvas, T } from '@threlte/core';
+	import { OrbitControls } from '@threlte/extras';
 
-	let fullCycle = $state(false);
-	let hasScrolled = $state(false);
+	let fullCycle = false;
+	let hasScrolled = false;
 
-	let showHint = $derived(fullCycle && !hasScrolled);
+	$: showHint = fullCycle && !hasScrolled;
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -81,6 +84,13 @@
 		</div>
 		<Image size={333} src="/me.jpeg" wiggle />
 	</Section>
+	<Section horizontal swooshbottom fade>
+		<div class="skills">
+			<h1>My brain</h1>
+			<p>My skills and tools!</p>
+		</div>
+		<Skull />
+	</Section>
 	<div class="projects">
 		<Section>
 			<h2 id="projects">My projects</h2>
@@ -112,11 +122,11 @@
 			<h1>My GitHub</h1>
 		</Section>
 	</div>
-	<Section swooshbottom fade>
+	<!-- <Section swooshbottom fade>
 		<Orb x={-40} y={2} width={500} height={300} />
 		<Orb x={0} y={75} width={500} height={500} />
 		<GitHubActivity user="somfic" />
-	</Section>
+	</Section> -->
 </div>
 
 <!-- TODO: LAST ACTIVITY PER PROJECT (PUSHED 23 MINUTES AGO) -->
@@ -193,5 +203,9 @@
 				opacity: 0.5;
 			}
 		}
+	}
+
+	.skills {
+		width: 40%;
 	}
 </style>

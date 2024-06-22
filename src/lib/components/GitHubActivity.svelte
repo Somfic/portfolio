@@ -54,9 +54,11 @@
 			<div class="content">
 				{#if activity.type == 'PushEvent'}
 					<div class="commits">
-						{#each activity.payload.commits! as commit}
-							<p class="commit">{@html commit.message}</p>
-						{/each}
+						{#if activity.payload.commits}
+							{#each activity.payload.commits as commit}
+								<p class="commit">{@html commit.message}</p>
+							{/each}
+						{/if}
 					</div>
 				{:else if activity.type == 'PullRequestEvent'}
 					<p>{activity.payload.pull_request?.number}</p>
