@@ -100,6 +100,7 @@
 				padding: 5px;
 				background-color: $background-frosted;
 				filter: grayscale(60%);
+				pointer-events: none;
 			}
 
 			.content {
@@ -192,7 +193,7 @@
 		}
 
 		.card.small {
-			transform: translate(0px, 0px) rotate(0deg);
+			transform: scale(0.5) translate(0px, 0px) rotate(0deg);
 		}
 
 		.card.small:nth-child(1).expand {

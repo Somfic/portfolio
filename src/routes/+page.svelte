@@ -98,6 +98,7 @@
 		</Section>
 		<HorizontalScroll>
 			<Section>
+				<Orb x={-40} y={2} width={500} height={300} />
 				<div class="project">
 					<Project
 						repo="somfic/eliteapi"
