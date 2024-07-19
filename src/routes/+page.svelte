@@ -208,5 +208,5 @@
 
 	.skills {
 		width: 40%;
-	}
+	} 
 </style>

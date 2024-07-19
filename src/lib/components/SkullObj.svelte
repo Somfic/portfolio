@@ -22,274 +22,182 @@ Command: npx @threlte/gltf@2.0.3 skull.glb
 		<T.Group position={[-0.04, -0.01, 0]} rotation={[-1.1, 0, 0]} scale={1.01}>
 			<T.Group rotation={[Math.PI / 2, 0, 0]}>
 				<T.Mesh
-					geometry={gltf.nodes.defaultMaterial.geometry}
-					material={gltf.materials['Rosa_material.001']}
-				/>
-				<T.Mesh
 					geometry={gltf.nodes.defaultMaterial001.geometry}
 					material={gltf.materials['defaultMat_material.001']}
 				/>
+				<T.Mesh
+					geometry={gltf.nodes.skull.geometry}
+					material={gltf.materials['Rosa_material.001']}
+				/>
 			</T.Group>
 		</T.Group>
-		<T.SpotLight
-			intensity={25}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			color="#ffaa00"
-			position={[3.33, 4.93, -1.64]}
-			rotation={[-1.89, 0.57, 0.14]}
-			scale={[0.5, 10, 1.86]}
-		/>
-		<T.SpotLight
-			intensity={25}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			color="#6200ff"
-			position={[-2.81, 1.9, -2.89]}
-			rotation={[-2.56, -0.67, -0.83]}
-			scale={[0.5, 10, 1.86]}
-		/>
-		<T.SpotLight
-			intensity={25}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			color="#ff3000"
-			position={[4.58, 2.6, 0.15]}
-			rotation={[-1.51, 1.06, 0]}
-			scale={[0.5, 10, 1.86]}
-		/>
-		<T.SpotLight
-			intensity={25}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			color="#ff00db"
-			position={[-6.87, 0.18, -0.04]}
-			rotation={[-1.79, -1.54, -0.3]}
-			scale={[0.5, 10, 1.86]}
-		/>
-		<T.SpotLight
-			intensity={25}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			color="#0400ff"
-			position={[-3.27, 5.36, 1.02]}
-			rotation={[-1.38, -0.53, 0.02]}
-			scale={[0.5, 10, 1.86]}
-		/>
-		<T.SpotLight
-			intensity={25}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			color="#ff0000"
-			position={[7.76, -0.28, 0.71]}
-			rotation={[0.36, 1.47, 1.11]}
-			scale={[0.5, 10, 1.86]}
-		/>
-		<T.SpotLight
-			intensity={25}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			color="#00ff0d"
-			position={[1.06, 5.96, 0.17]}
-			rotation={[-1.54, 0.18, -0.19]}
-			scale={[0.5, 10, 1.86]}
-		/>
-		<T.SpotLight
-			intensity={2}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			position={[-1.88, 0.34, -0.94]}
-			rotation={[-2.79, -1.07, -0.57]}
-			scale={5.34}
-		/>
-		<T.SpotLight
-			intensity={2}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			position={[1.99, 0.31, -0.51]}
-			rotation={[0.56, -1.28, 2.8]}
-			scale={-3.09}
-		/>
-		<T.SpotLight
-			intensity={2}
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			position={[0, 0.17, -2.37]}
-			rotation={[-3.06, 0.02, 0.02]}
-			scale={1.66}
-		/>
-		<T.SpotLight
-			intensity={10}
-			color="#ffff55"
-			angle={Math.PI / 8}
-			penumbra={0.15}
-			decay={2}
-			position={[0, 1, 2]}
-			scale={1.66}
-		/>
 		<T.Mesh
-			geometry={gltf.nodes['1280px-Sass_Logo_Colorsvg'].geometry}
+			geometry={gltf.nodes.sass.geometry}
 			material={gltf.materials['1280px-Sass_Logo_Color.svg']}
 			position={[-0.75, -0.09, 0.06]}
 			rotation={[1.71, 0.1, 1.47]}
 			scale={0.18}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['fa4cd070-6a79-4e1b-b079-8b9b76408595-cover'].geometry}
+			geometry={gltf.nodes.figma.geometry}
 			material={gltf.materials['fa4cd070-6a79-4e1b-b079-8b9b76408595-cover']}
-			position={[0.58, 0.1, -0.56]}
-			rotation={[1.77, 0, -2.32]}
+			position={[0.59, 0.1, -0.53]}
+			rotation={[1.71, 0.06, -2.28]}
 			scale={[0.21, 0.21, 0.23]}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.github_black_logo_icon_147128.geometry}
+			geometry={gltf.nodes.github.geometry}
 			material={gltf.materials.github_black_logo_icon_147128}
 			position={[0.21, 0.42, -1.02]}
 			rotation={[1.93, 0.19, -2.91]}
 			scale={0.35}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['svelte-icon-426x512-cm99sfkq'].geometry}
+			geometry={gltf.nodes.svelte.geometry}
 			material={gltf.materials['svelte-icon-426x512-cm99sfkq']}
 			position={[-0.7, 0.42, 0.06]}
 			rotation={[1.47, -0.56, 1.44]}
 			scale={0.41}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.Typescript_logo_2020svg.geometry}
+			geometry={gltf.nodes.typescript.geometry}
 			material={gltf.materials['Typescript_logo_2020.svg']}
-			position={[-0.91, 0.12, 0.29]}
-			rotation={[1.52, -0.13, 1.24]}
+			position={[-0.67, 0.09, 0.22]}
+			rotation={[1.6, -0.16, 1.24]}
 			scale={0.12}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.Visual_Studio_Code_135_iconsvg.geometry}
+			geometry={gltf.nodes.vscode.geometry}
 			material={gltf.materials['Visual_Studio_Code_1.35_icon.svg']}
 			position={[-0.56, 0.61, -0.6]}
 			rotation={[1.97, -0.58, 2.48]}
 			scale={0.31}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['0_J0XkTtb-1Sz98XWg'].geometry}
+			geometry={gltf.nodes.rust_cute.geometry}
 			material={gltf.materials['0_J0XkTtb-1Sz98XWg']}
 			position={[0.65, 0.26, -0.02]}
 			rotation={[1.55, 0.37, -1.59]}
 			scale={0.12}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['2023-06-logo'].geometry}
+			geometry={gltf.nodes.obsidian.geometry}
 			material={gltf.materials['2023-06-logo']}
 			position={[-0.29, 0.39, -1]}
 			rotation={[1.93, -0.09, 2.91]}
 			scale={0.2}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['103777144-0fc43c80-4ff6-11eb-9b6c-eee486bc382b'].geometry}
+			geometry={gltf.nodes.nu.geometry}
 			material={gltf.materials['103777144-0fc43c80-4ff6-11eb-9b6c-eee486bc382b']}
 			position={[-0.56, 0.34, -0.75]}
 			rotation={[-1.36, 0.34, 0.61]}
 			scale={0.16}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.Deno.geometry}
+			geometry={gltf.nodes.deno.geometry}
 			material={gltf.materials.Deno}
 			position={[-0.7, 0.14, -0.66]}
 			rotation={[1.67, -0.13, 2.37]}
 			scale={0.2}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.Git_iconsvg.geometry}
+			geometry={gltf.nodes.git.geometry}
 			material={gltf.materials['Git_icon.svg']}
 			position={[0.02, 0.18, -0.99]}
 			rotation={[1.76, 0.06, -3.08]}
 			scale={0.17}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.LaTeX_logosvg.geometry}
+			geometry={gltf.nodes.latex.geometry}
 			material={gltf.materials['LaTeX_logo.svg']}
 			position={[-0.26, 0.21, -1.08]}
 			rotation={[1.78, 0.05, 2.95]}
 			scale={0.06}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.Logo_C_sharpsvg.geometry}
+			geometry={gltf.nodes['c#'].geometry}
 			material={gltf.materials['Logo_C_sharp.svg']}
-			position={[0.53, 0.53, -0.44]}
+			position={[0.53, 0.54, -0.44]}
 			rotation={[1.82, 0.63, 0.9]}
 			scale={-0.3}
 		/>
 		<T.Mesh
 			geometry={gltf.nodes.markdown.geometry}
 			material={gltf.materials.markdown}
-			position={[-0.54, 0.25, -1.2]}
-			rotation={[-1.43, 0.17, -2.75]}
+			position={[-0.42, 0.19, -0.95]}
+			rotation={[-1.4, 0.1, -2.76]}
 			scale={-0.11}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['rust-logo-512x512'].geometry}
+			geometry={gltf.nodes.rust.geometry}
 			material={gltf.materials['rust-logo-512x512']}
 			position={[0.47, 0.55, 0.13]}
 			rotation={[1.28, 0.77, -1.19]}
 			scale={0.38}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['icons8-css3-480'].geometry}
+			geometry={gltf.nodes.css.geometry}
 			material={gltf.materials['icons8-css3-480']}
-			position={[-0.68, 0.21, -0.19]}
-			rotation={[1.47, -0.35, 1.81]}
-			scale={0.1}
+			position={[-0.7, 0.22, -0.2]}
+			rotation={[1.47, -0.36, 1.81]}
+			scale={0.11}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['icons8-html-5-480'].geometry}
+			geometry={gltf.nodes.html.geometry}
 			material={gltf.materials['icons8-html-5-480']}
 			position={[-0.67, 0.37, -0.21]}
 			rotation={[1.57, -0.55, 1.85]}
 			scale={0.13}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['javascript-logo-javascript-icon-transparent-free-png'].geometry}
+			geometry={gltf.nodes.javascript.geometry}
 			material={gltf.materials['javascript-logo-javascript-icon-transparent-free-png']}
 			position={[-0.72, 0.08, -0.14]}
 			rotation={[1.4, -0.17, 1.75]}
 			scale={0.11}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.Adobe_Photoshop_CC_iconsvg.geometry}
+			geometry={gltf.nodes.photoshop.geometry}
 			material={gltf.materials['Adobe_Photoshop_CC_icon.svg']}
 			position={[0.55, -0.14, -0.75]}
 			rotation={[1.39, 0, -2.48]}
 			scale={0.19}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.Blender_logo_no_textsvg.geometry}
+			geometry={gltf.nodes.blender.geometry}
 			material={gltf.materials['Blender_logo_no_text.svg']}
-			position={[0.46, 0.09, -0.84]}
-			rotation={[1.66, 0.05, -2.6]}
+			position={[0.47, 0.08, -0.82]}
+			rotation={[1.59, 0.14, -2.58]}
 			scale={[0.17, 0.19, 0.19]}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes.e4f86d2200d2d35c30f7b1494e96b9595ebc2751.geometry}
+			geometry={gltf.nodes.threejs.geometry}
 			material={gltf.materials.e4f86d2200d2d35c30f7b1494e96b9595ebc2751}
 			position={[0.35, -0.19, -0.78]}
 			rotation={[-1.23, 0.83, -0.71]}
 			scale={0.17}
 		/>
 		<T.Mesh
-			geometry={gltf.nodes['5968322'].geometry}
+			geometry={gltf.nodes.node.geometry}
 			material={gltf.materials['5968322']}
 			position={[-0.74, 0.31, -0.51]}
 			rotation={[1.75, -0.31, 2.22]}
 			scale={0.15}
+		/>
+		<T.Mesh
+			geometry={gltf.nodes.nicks.geometry}
+			material={gltf.materials.nick}
+			position={[-0.06, -0.43, 0.06]}
+			rotation={[3.01, 0.02, 0.04]}
+			scale={0.16}
+		/>
+		<T.Mesh
+			geometry={gltf.nodes.bun.geometry}
+			material={gltf.materials['182802334-d9c42afe-f35d-4a7b-86ea-9985f73f20c3']}
+			position={[-0.73, 0.07, -0.39]}
+			rotation={[1.54, -0.13, 2.07]}
+			scale={[0.16, 0.07, 0.19]}
 		/>
 	{:catch error}
 		<slot name="error" {error} />
