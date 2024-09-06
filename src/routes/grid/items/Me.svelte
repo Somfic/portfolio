@@ -1,4 +1,4 @@
-<div>
+<div class="me">
 	<div class="header">
 		<img src="/me.jpeg" alt="" />
 		<h1>Lucas Valerio de Jong</h1>
@@ -12,14 +12,13 @@
 </div>
 
 <style lang="scss">
-	div {
+	.me {
 		display: flex;
 		flex-direction: column;
 	}
 
 	.header {
 		display: flex;
-		flex-direction: row;
 		align-items: center;
 		flex-grow: 1;
 		justify-content: space-between;
@@ -34,6 +33,9 @@
 			width: 100px;
 			height: 100px;
 			z-index: 20;
+			box-shadow:
+				inset 1px 4px 6px rgba(0, 0, 0, 0.4),
+				inset 0px -2px 16px -3px rgba(0, 0, 0, 0.2);
 		}
 	}
 </style>

@@ -30,6 +30,9 @@
   },
   "type": "module",
   "dependencies": {
-    "sass": "^1.78.0"
+    "@icons-pack/svelte-simple-icons": "^3.0.0",
+    "lucide-svelte": "^0.439.0",
+    "sass": "^1.78.0",
+    "simple-icons": "^13.8.0"
   }
 }

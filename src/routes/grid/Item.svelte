@@ -1,8 +1,20 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	let element: HTMLDivElement;
 
-	let { mouseX, mouseY, hovering }: { mouseX: number; mouseY: number; hovering: boolean } =
-		$props();
+	let mouseX = $state(0);
+	let mouseY = $state(0);
+	let { width, height }: { width: number; height: number } = $props();
+
+	onMount(() => {
+		window.addEventListener('mousemove', onMouseMove);
+	});
+
+	function onMouseMove(event: MouseEvent) {
+		mouseX = event.clientX;
+		mouseY = event.clientY;
+	}
 
 	$effect(() => {
 		const x = mouseX - element.getBoundingClientRect().left;
@@ -10,14 +22,9 @@
 
 		element.style.setProperty('--x', `${x}px`);
 		element.style.setProperty('--y', `${y}px`);
-	});
 
-	$effect(() => {
-		if (hovering) {
-			element.classList.add('hovering');
-		} else {
-			element.classList.remove('hovering');
-		}
+		element.style.setProperty('--width', `${width}`);
+		element.style.setProperty('--height', `${height}`);
 	});
 </script>
 
@@ -39,9 +46,26 @@
 		backdrop-filter: blur(10px) saturate(180%) contrast(80%) brightness(120%);
 		position: relative;
 
+		grid-column: span var(--width, 1);
+		grid-row: span var(--height, 1);
+
 		> .content-wrapper {
+			display: flex;
 			position: relative;
-			background-color: rgba(23, 23, 23);
+			// background-image: conic-gradient(
+			// 	from -45deg at 50% 150%,
+			// 	transparent 0deg,
+			// 	rgb(16, 7, 30) 15deg,
+			// 	transparent 30deg,
+			// 	rgb(16, 7, 30) 45deg,
+			// 	transparent 60deg,
+			// 	rgb(16, 7, 30) 75deg,
+			// 	transparent 90deg
+			// );
+			// background: linear-gradient(to right, blue, transparent),
+			// 	url(https://grainy-gradients.vercel.app/noise.svg);
+			background-color: rgb(12, 12, 12);
+
 			border-radius: 19px;
 			margin: 1px;
 			height: calc(100% - 2px);
@@ -50,6 +74,8 @@
 			overflow: hidden;
 
 			.content {
+				display: flex;
+				flex-grow: 1;
 				padding: 1rem 2rem;
 			}
 		}
@@ -57,11 +83,6 @@
 		&::before {
 			z-index: 4;
 		}
-	}
-
-	.card.hovering::before,
-	.card.hovering > .border {
-		opacity: 1;
 	}
 
 	.border,
@@ -79,7 +100,6 @@
 			transparent 40%
 		);
 		transition: opacity 500ms;
-		opacity: 1;
 	}
 
 	.border {
