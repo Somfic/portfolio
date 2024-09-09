@@ -22,7 +22,7 @@ jobs:
         run: bun install
 
       - name: Build
-        run: bun build
+        run: bun run build
 
       - name: Deploy
         uses: rdarida/simple-github-pages-deploy-action@main
