@@ -2,13 +2,15 @@
 	import Item from './grid/Item.svelte';
 	import ButtonLink from './grid/items/ButtonLink.svelte';
 	import Me from './grid/items/Me.svelte';
+	import Scroller from './grid/items/Scroller.svelte';
 </script>
 
 <main>
 	<Item width={5} height={5}><Me /></Item>
 	<Item width={2} height={2}><ButtonLink type={'github'} /></Item>
 	<Item width={2} height={2}><ButtonLink type={'linkedin'} /></Item>
-	<Item width={2} height={2}><ButtonLink type={'email'} /></Item>
+	<Item width={5} height={2}><ButtonLink type={'email'} /></Item>
+	<Item width={5} height={4}><Scroller /></Item>
 </main>
 
 <style lang="scss">

@@ -14,6 +14,7 @@
 
 <style lang="scss">
 	.button {
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;

@@ -90,6 +90,7 @@
 		content: '';
 		border-radius: 1rem;
 		position: absolute;
+		pointer-events: none;
 		left: 0;
 		top: 0;
 		width: 100%;
