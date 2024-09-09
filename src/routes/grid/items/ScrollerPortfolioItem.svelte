@@ -9,12 +9,12 @@
 
 <style lang="scss">
 	p {
+		display: block;
 		margin: 0;
 		padding: 0;
 		font-size: 2rem;
 		padding-right: 1rem;
 		width: 100%;
 		// No wrapping
-		white-space: nowrap;
 	}
 </style>

@@ -3,29 +3,24 @@
 
 	let element: HTMLDivElement;
 
-	let mouseX = $state(0);
-	let mouseY = $state(0);
-	let {
-		padding = 20,
-		width,
-		height
-	}: { width: number; height: number; padding?: number } = $props();
+	let mouseX = 0;
+	let mouseY = 0;
+
+	export let padding = 20;
+	export let width: number;
+	export let height: number;
 
 	onMount(() => {
 		window.addEventListener('mousemove', onMouseMove);
+
+		element.style.setProperty('--paddingX', `${padding * 1.15}px`);
+		element.style.setProperty('--paddingY', `${padding}px`);
 	});
 
 	function onMouseMove(event: MouseEvent) {
 		mouseX = event.clientX;
 		mouseY = event.clientY;
-	}
 
-	$effect(() => {
-		element.style.setProperty('--paddingX', `${padding * 1.15}px`);
-		element.style.setProperty('--paddingY', `${padding}px`);
-	});
-
-	$effect(() => {
 		const x = mouseX - element.getBoundingClientRect().left;
 		const y = mouseY - element.getBoundingClientRect().top;
 
@@ -34,7 +29,7 @@
 
 		element.style.setProperty('--width', `${width}`);
 		element.style.setProperty('--height', `${height}`);
-	});
+	}
 </script>
 
 <!-- svelte-ignore a11y_no_static_element_interactions -->
@@ -50,7 +45,7 @@
 <style lang="scss">
 	.card {
 		background-color: rgba(255, 255, 255, 0.1);
-		border-radius: 20px;
+		border-radius: 21px;
 
 		backdrop-filter: blur(10px) saturate(180%) contrast(80%) brightness(120%);
 		position: relative;
@@ -59,7 +54,7 @@
 		grid-row: span var(--height, 1);
 
 		&:hover > .content-wrapper {
-			background-color: rgba(0, 0, 0, 0.9);
+			background-color: rgba(0, 0, 0, 0.8);
 		}
 
 		> .content-wrapper {

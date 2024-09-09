@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let width = $state(0);
-	let height = $state(0);
+	let width = 0;
+	let height = 0;
 
 	onMount(() => {
 		document.addEventListener('resize', onResize);
@@ -15,9 +15,9 @@
 	}
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" {width} {height}>
+<svg xmlns="http://www.w3.org/2000/svg">
 	<filter id="noise" x="0" y="0">
-		<feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="1" />
+		<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" />
 		<feBlend mode="screen" />
 	</filter>
 	<rect {width} {height} filter="url(#noise)" />
@@ -30,6 +30,9 @@
 		left: 0;
 		opacity: 0.1;
 		pointer-events: none;
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
 
 		z-index: 1;
 		// animation: noise 1s infinite linear;

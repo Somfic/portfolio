@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { url }: { url: string } = $props();
+	export let url: string;
 </script>
 
 <div style="background-image: url({url})" class="image"></div>

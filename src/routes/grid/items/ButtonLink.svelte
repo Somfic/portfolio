@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { type }: { type: 'github' | 'email' | 'linkedin' } = $props();
+	export let type: 'github' | 'email' | 'linkedin';
 </script>
 
 <div class="button">
