@@ -64,19 +64,18 @@
 			// );
 			// background: linear-gradient(to right, blue, transparent),
 			// 	url(https://grainy-gradients.vercel.app/noise.svg);
-			background-color: rgb(12, 12, 12);
-
+			background-color: rgba(12, 12, 12, 0.8);
 			border-radius: 19px;
 			margin: 1px;
 			height: calc(100% - 2px);
-			width: calc(100% - 2px);
+			max-width: calc(100% - 2px);
 			z-index: 2;
 			overflow: hidden;
 
 			.content {
 				display: flex;
 				flex-grow: 1;
-				padding: 1rem 2rem;
+				padding: 1rem 1.5rem;
 			}
 		}
 

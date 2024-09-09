@@ -8,16 +8,12 @@
 		// Randomize the order of the elements
 		const elements = Array.from(element.children);
 		elements.sort(() => Math.random() - 0.5);
-
 		element.innerHTML = '';
 
 		for (const el of elements) {
 			element.appendChild(el);
+			clonedElement.appendChild(el.cloneNode(true));
 		}
-
-		const clone = element.cloneNode(true) as HTMLDivElement;
-		clone.classList.add('cloned');
-		clonedElement.appendChild(clone);
 	});
 </script>
 
@@ -41,11 +37,6 @@
 		<img
 			src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
 			alt="Git"
-		/>
-
-		<img
-			src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
-			alt="GitHub"
 		/>
 
 		<img
@@ -82,32 +73,58 @@
 			src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
 			alt="Rust"
 		/>
+
+		<img
+			src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg"
+			alt=".NET"
+		/>
+
+		<img
+			src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+			alt="Java"
+		/>
+
+		<img
+			src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+			alt="MySQL"
+		/>
+
+		<div class="copied" bind:this={clonedElement}></div>
 	</div>
-	<div class="content" bind:this={clonedElement}></div>
 </div>
 
 <style lang="scss">
 	.scroller {
-		overflow: hidden;
-		padding: 60px 0;
-		white-space: nowrap;
+		display: flex;
+		max-width: 100%;
+		flex-grow: 1;
 		position: relative;
+		mask-image: linear-gradient(to right, transparent, black 35%, black 65%, transparent);
+	}
 
-		&:hover .content {
-			animation-play-state: paused;
-		}
+	.copied {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 100%;
+		z-index: 10;
 	}
 
 	.content {
-		display: inline-block;
-		animation: 5s slide infinite linear;
+		display: flex;
+		position: absolute;
+		height: 100%;
+		animation: 60s slide infinite linear;
 
 		img {
-			height: 50px;
-			margin: 0 40px;
-			background-color: rgba(255, 255, 255);
-			padding: 10px;
+			height: calc(100% - 2rem);
+			background-color: rgb(47, 47, 47, 0.6);
+			padding: 1rem;
 			border-radius: 10px;
+			margin-right: 1rem;
+
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 		}
 	}
 	@keyframes slide {
