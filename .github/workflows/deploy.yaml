@@ -3,6 +3,8 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+permissions:
+  contents: write
 
 jobs:
   client:
@@ -25,8 +27,8 @@ jobs:
         run: bun run build
 
       - name: Deploy
-        uses: rdarida/simple-github-pages-deploy-action@main
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          git-base-folder: build
+          folder: build
           commit-message: Compiled client
           branch: deploy
