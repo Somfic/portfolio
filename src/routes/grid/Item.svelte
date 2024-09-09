@@ -5,7 +5,11 @@
 
 	let mouseX = $state(0);
 	let mouseY = $state(0);
-	let { width, height }: { width: number; height: number } = $props();
+	let {
+		padding = 20,
+		width,
+		height
+	}: { width: number; height: number; padding?: number } = $props();
 
 	onMount(() => {
 		window.addEventListener('mousemove', onMouseMove);
@@ -15,6 +19,11 @@
 		mouseX = event.clientX;
 		mouseY = event.clientY;
 	}
+
+	$effect(() => {
+		element.style.setProperty('--paddingX', `${padding * 1.15}px`);
+		element.style.setProperty('--paddingY', `${padding}px`);
+	});
 
 	$effect(() => {
 		const x = mouseX - element.getBoundingClientRect().left;
@@ -49,6 +58,10 @@
 		grid-column: span var(--width, 1);
 		grid-row: span var(--height, 1);
 
+		&:hover > .content-wrapper {
+			background-color: rgba(0, 0, 0, 0.9);
+		}
+
 		> .content-wrapper {
 			display: flex;
 			position: relative;
@@ -71,11 +84,12 @@
 			max-width: calc(100% - 2px);
 			z-index: 2;
 			overflow: hidden;
+			transition: background-color 500ms;
 
 			.content {
 				display: flex;
 				flex-grow: 1;
-				padding: 1rem 1.5rem;
+				padding: var(--paddingX) var(--paddingY);
 			}
 		}
 
