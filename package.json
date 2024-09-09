@@ -31,6 +31,7 @@
   "type": "module",
   "dependencies": {
     "@icons-pack/svelte-simple-icons": "^3.0.0",
+    "@sveltejs/adapter-static": "^3.0.4",
     "lucide-svelte": "^0.439.0",
     "sass": "^1.78.0",
     "simple-icons": "^13.8.0"
