@@ -15,6 +15,12 @@
 
 		element.style.setProperty('--paddingX', `${padding * 1.15}px`);
 		element.style.setProperty('--paddingY', `${padding}px`);
+
+		element.style.setProperty('--x', `0px`);
+		element.style.setProperty('--y', `0px`);
+
+		element.style.setProperty('--width', `0px`);
+		element.style.setProperty('--height', `0px`);
 	});
 
 	function onMouseMove(event: MouseEvent) {

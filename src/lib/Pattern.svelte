@@ -7,9 +7,8 @@
 		height: 100vh;
 		top: 0;
 		left: 0;
-
 		pointer-events: none;
-
+		
 		--color: white;
 
 		--dotSize: 1px;
