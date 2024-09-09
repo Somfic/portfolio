@@ -4,17 +4,19 @@
 		<h1><span>Lucas de Jong</span></h1>
 	</div>
 
-	<p>
-		Hoi! Ik ben een gepassioneerde full-stack software-developer geintresseerd in mooie interfaces
-		met goedwerkende backend-systemen.
-	</p>
-	<p>Momenteel op zoek naar een leuke baan.</p>
+	<div>
+		<p>
+			Hoi! Ik ben een gepassioneerde full-stack software-developer geintresseerd in mooie interfaces
+			met goedwerkende backend-systemen.
+		</p>
+	</div>
 </div>
 
 <style lang="scss">
 	.me {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	.header {
@@ -42,10 +44,6 @@
 				inset 0px -2px 16px -3px rgba(0, 0, 0, 0.2);
 			margin-right: 0.75rem;
 			border: 2px solid rgba(255, 255, 255, 0.25);
-		}
-
-		p {
-			margin: 0;
 		}
 	}
 </style>
