@@ -15,22 +15,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Install yarn
-        run: npm install -g yarn
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
-        run: yarn install
+        run: bun install
 
       - name: Build
-        run: yarn build
+        run: bun build
 
       - name: Deploy
-        uses: rdarida/simple-github-pages-deploy-action@v1
+        uses: rdarida/simple-github-pages-deploy-action@main
         with:
           git-base-folder: build
           commit-message: Compiled client
