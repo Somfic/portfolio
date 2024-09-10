@@ -12,6 +12,7 @@
 	import ScrollerTechItems from './grid/items/ScrollerTechItems.svelte';
 	import Skull from './grid/items/Skull.svelte';
 	import Project from './grid/items/Project.svelte';
+	import Experience from './grid/items/Experience.svelte';
 </script>
 
 <Pattern />
@@ -21,14 +22,33 @@
 <main>
 	<Item width={2} height={2}><Me /></Item>
 	<Item width={1} height={1}><ButtonLink type="github" link="https://github.com/Somfic" /></Item>
-	<Item width={1} height={1}
-		><ButtonLink type="linkedin" link="https://www.linkedin.com/in/lvdejong/" /></Item
+	<Item width={1} height={1}>
+		<ButtonLink type="linkedin" link="https://www.linkedin.com/in/lvdejong/" /></Item
 	>
 	<Item width={2} height={1}><ButtonLink type="email" link="mailto:lucas@somfic.dev" /></Item>
 	<Item width={4} height={1}>
 		<Scroller>
 			<ScrollerTechItems />
 		</Scroller>
+	</Item>
+
+	<Item width={3} height={1}>
+		<div class="experience">
+			<Experience
+				title="HBO Technische Informatica"
+				location="Avans Hogeschool"
+				image="avans.png"
+				start="2021"
+				end="2024"
+			/>
+			<Experience
+				title="HBO Informatica"
+				location="Avans Hogeschool"
+				image="avans.png"
+				start="2019"
+				end="2021"
+			/>
+		</div>
 	</Item>
 	<Item width={2} height={2} padding={0}><Image url="location.png" /></Item>
 	<Item width={2} height={3}>
@@ -144,6 +164,14 @@
 		width: 100%;
 		min-height: 100%;
 		background-color: black;
+		color: rgba(255, 255, 255, 0.9);
+	}
+
+	.experience {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		flex-grow: 1;
 	}
 
 	main {
@@ -155,7 +183,6 @@
 		// dense grid
 		grid-auto-flow: dense;
 
-		color: white;
 		max-width: 999px;
 
 		// When on tablet

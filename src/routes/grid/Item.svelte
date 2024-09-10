@@ -6,7 +6,7 @@
 	let mouseX = 0;
 	let mouseY = 0;
 
-	export let padding = 20;
+	export let padding = 30;
 	export let width: number;
 	export let height: number;
 
