@@ -33,6 +33,18 @@
 	<Item width={2} height={2} padding={0}><Image url="location.png" /></Item>
 	<Item width={2} height={3}>
 		<Project
+			title="EliteAPI"
+			description="Een .NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'."
+			locationEmoji="school.png"
+			location="GitHub"
+			image="eliteapi.png"
+			tags={['C#', 'Open source']}
+			github="https://github.com/Somfic/EliteAPI"
+			stars="100+"
+		/>
+	</Item>
+	<Item width={2} height={3}>
+		<Project
 			title="Boebot"
 			description="Een robot die zelfstandig lijnen kan volgen en obstakels kan ontwijken."
 			locationEmoji="avans.png"
@@ -50,7 +62,20 @@
 			locationEmoji="school.png"
 			location="GitHub"
 			image="moviez.png"
+			video="moviez.mp4"
 			tags={['Svelte', 'API']}
+			github="https://github.com/Somfic/moviez"
+		/>
+	</Item>
+	<Item width={2} height={3}>
+		<Project
+			title="Schoolplanner"
+			description="2D grafische applicatie voor het plannen en simuleren van schoolroosters."
+			locationEmoji="school.png"
+			location="Avans Hogeschool"
+			image="schoolplanner.png"
+			video="schoolplanner2.mp4"
+			tags={['2D', 'Graphics', 'Java', 'Scrum']}
 			github="https://github.com/Somfic/moviez"
 		/>
 	</Item>
@@ -84,18 +109,7 @@
 			github="https://github.com/Somfic/Infinity-Alphine"
 		/>
 	</Item> -->
-	<Item width={2} height={3}>
-		<Project
-			title="EliteAPI"
-			description="Een .NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'."
-			locationEmoji="school.png"
-			location="GitHub"
-			image="eliteapi.png"
-			tags={['C#', 'Open source']}
-			github="https://github.com/Somfic/EliteAPI"
-			stars="100+"
-		/>
-	</Item>
+
 	<!-- <Item width={2} height={3}>
 		<Project
 			title="School Planner"

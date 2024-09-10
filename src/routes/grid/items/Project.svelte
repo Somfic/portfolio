@@ -117,6 +117,7 @@
 		img {
 			height: 1.2em;
 			width: auto;
+			border-radius: 100px;
 		}
 	}
 
