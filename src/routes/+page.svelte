@@ -34,14 +34,15 @@
 	<Item width={2} height={3}>
 		<Project
 			title="EliteAPI"
-			description="Een .NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'."
+			description=".NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair by streamers om stemcommando's te gebruiken."
 			locationEmoji="school.png"
 			location="GitHub"
 			image="eliteapi.png"
 			tags={['C#', 'Open source']}
 			github="https://github.com/Somfic/EliteAPI"
 			stars="100+"
-			downloads="17k+"
+			downloads="17.000+"
+			streamers="10+"
 		/>
 	</Item>
 	<Item width={2} height={3}>

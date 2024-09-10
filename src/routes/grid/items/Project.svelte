@@ -10,6 +10,7 @@
 	export let link: string | undefined = undefined;
 	export let stars: string | undefined = undefined;
 	export let downloads: string | undefined = undefined;
+	export let streamers: string | undefined = undefined;
 </script>
 
 <div class="project">
@@ -21,6 +22,11 @@
 	{#if downloads}
 		<div class="downloads">
 			{downloads} <img src="/people.png" alt="" />
+		</div>
+	{/if}
+	{#if streamers}
+		<div class="streamers">
+			{streamers} <img src="/twitch.png" alt="" />
 		</div>
 	{/if}
 	<div class="media" class:video>
@@ -67,7 +73,8 @@
 	}
 
 	.stars,
-	.downloads {
+	.downloads,
+	.streamers {
 		position: absolute;
 		display: flex;
 		align-items: center;
@@ -94,7 +101,7 @@
 			color: $accent;
 			box-shadow: 0 0 10px transparentize($accent, 0.5);
 			border: 2px solid $accent;
-			transform: rotate(4deg) translate(15px, -15px);
+			transform: rotate(4deg) translate(10px, -15px);
 		}
 
 		&.downloads {
@@ -105,6 +112,16 @@
 			box-shadow: 0 0 10px transparentize($accent, 0.5);
 			border: 2px solid $accent;
 			transform: rotate(-2deg) translate(15px, 16px);
+		}
+
+		&.streamers {
+			$accent: rgb(149, 68, 235);
+
+			background-color: transparentize($accent, 0.7);
+			color: $accent;
+			box-shadow: 0 0 10px transparentize($accent, 0.5);
+			border: 2px solid $accent;
+			transform: rotate(2deg) translate(12px, 44px);
 		}
 	}
 
