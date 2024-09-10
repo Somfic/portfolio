@@ -34,7 +34,7 @@
 	<Item width={2} height={3}>
 		<Project
 			title="EliteAPI"
-			description=".NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair by streamers om stemcommando's te gebruiken."
+			description=".NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair bij streamers om stemcommando's te gebruiken."
 			locationEmoji="school.png"
 			location="GitHub"
 			image="eliteapi.png"
