@@ -79,6 +79,17 @@
 			github="https://github.com/Somfic/moviez"
 		/>
 	</Item>
+	<Item width={2} height={3}>
+		<Project
+			title="Doolhof generator"
+			description="Een grafische applicatie voor het genereren van doolhoven op een eiland."
+			locationEmoji="avans.png"
+			location="Avans Hogeschool"
+			image="maze.png"
+			video="maze.mp4"
+			tags={['Java', 'Graphics']}
+		/>
+	</Item>
 	<!-- <Item width={2} height={3}>
 		<Project
 			title="Dice Arcade Game"
