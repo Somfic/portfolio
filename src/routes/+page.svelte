@@ -116,7 +116,7 @@
 			location="Avans Hogeschool"
 			image="skoolworkshop.png"
 			github="https://github.com/Somfic/skoolworkshop"
-			tags={['JavaScript', 'Node']}
+			tags={['JavaScript', 'Node', 'MySQL']}
 		/>
 	</Item>
 	<!-- <Item width={2} height={3}>
