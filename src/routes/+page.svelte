@@ -113,30 +113,7 @@
 			github="https://github.com/Somfic/2.2-Mobile-Development"
 		/>
 	</Item>
-	<Item width={2} height={3}>
-		<Project
-			title="Infinity Alphine"
-			locationEmoji="school.png"
-			location="Avans Hogeschool"
-			image="moviez.png"
-			tags={['Java', '3D Graphics']}
-			github="https://github.com/Somfic/Infinity-Alphine"
-		/>
-	</Item> -->
 
-	<!-- <Item width={2} height={3}>
-		<Project
-			title="School Planner"
-			locationEmoji="school.png"
-			location="Avans Hogeschool"
-			image="eliteapi.png"
-			tags={['Java', '2D Graphics', 'Scrum']}
-			github="https://github.com/Somfic/1.3-SchoolPlanner"
-		/>
-	</Item> -->
-
-	<!-- <Item width={10} height={5}>
-		<Skull />
 	</Item> -->
 </main>
 
