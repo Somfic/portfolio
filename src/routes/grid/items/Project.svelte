@@ -9,12 +9,18 @@
 	export let github: string | undefined = undefined;
 	export let link: string | undefined = undefined;
 	export let stars: string | undefined = undefined;
+	export let downloads: string | undefined = undefined;
 </script>
 
 <div class="project">
 	{#if stars}
 		<div class="stars">
 			{stars} <img src="/star.png" alt="" />
+		</div>
+	{/if}
+	{#if downloads}
+		<div class="downloads">
+			{downloads} <img src="/people.png" alt="" />
 		</div>
 	{/if}
 	<div class="media" class:video>
@@ -60,27 +66,45 @@
 		position: relative;
 	}
 
-	.stars {
+	.stars,
+	.downloads {
 		position: absolute;
 		display: flex;
 		align-items: center;
 		gap: 5px;
 		top: 0;
 		right: 0;
-		background-color: rgba(235, 188, 68, 0.3);
+
 		font-weight: bold;
-		color: rgb(236, 166, 25);
-		box-shadow: 0 0 10px rgba(255, 227, 45, 0.5);
 		border-radius: 10px;
 		padding: 5px 10px;
-		transform: rotate(4deg) translate(15px, -15px);
+
 		z-index: 10;
 		backdrop-filter: blur(10px);
-		border: 2px solid rgb(236, 166, 25);
 
 		img {
 			height: 1em;
 			width: 1em;
+		}
+
+		&.stars {
+			$accent: rgba(235, 188, 68);
+
+			background-color: transparentize($accent, 0.7);
+			color: $accent;
+			box-shadow: 0 0 10px transparentize($accent, 0.5);
+			border: 2px solid $accent;
+			transform: rotate(4deg) translate(15px, -15px);
+		}
+
+		&.downloads {
+			$accent: rgb(68, 177, 235);
+
+			background-color: transparentize($accent, 0.7);
+			color: $accent;
+			box-shadow: 0 0 10px transparentize($accent, 0.5);
+			border: 2px solid $accent;
+			transform: rotate(-2deg) translate(15px, 16px);
 		}
 	}
 
@@ -141,6 +165,7 @@
 			border-radius: 10px;
 			padding: 5px 10px;
 			font-size: 0.8rem;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 		}
 	}
 </style>

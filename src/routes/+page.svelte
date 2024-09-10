@@ -41,12 +41,13 @@
 			tags={['C#', 'Open source']}
 			github="https://github.com/Somfic/EliteAPI"
 			stars="100+"
+			downloads="17k+"
 		/>
 	</Item>
 	<Item width={2} height={3}>
 		<Project
 			title="Boebot"
-			description="Een robot die zelfstandig lijnen kan volgen en obstakels kan ontwijken."
+			description="Een robot die door middel van meerdere sensoren zelfstandig lijnen kan volgen, obstakels kan ontwijken en vracht kan vervoeren."
 			locationEmoji="avans.png"
 			location="Avans Hogeschool"
 			image="boombot.jpg"
@@ -58,36 +59,37 @@
 	<Item width={2} height={3}>
 		<Project
 			title="Moviez"
-			description="Een webapplicatie met een overzicht van films die in mijn lokale bioscoop draaien."
+			description="Een webapplicatie met een overzicht van films die in mijn lokale bioscoop draaien, aangestuurd door de Kinepolis API."
 			locationEmoji="school.png"
 			location="GitHub"
 			image="moviez.png"
 			video="moviez.mp4"
-			tags={['Svelte', 'API']}
+			tags={['Typescript', 'Svelte', 'SCSS', 'API']}
 			github="https://github.com/Somfic/moviez"
 		/>
 	</Item>
 	<Item width={2} height={3}>
 		<Project
 			title="Schoolplanner"
-			description="2D grafische applicatie voor het plannen en simuleren van schoolroosters."
+			description="2D from-scratch grafische applicatie voor het plannen van schoolroosters en het simuleren van drukte op de gangen en in klaslokalen."
 			locationEmoji="school.png"
 			location="Avans Hogeschool"
 			image="schoolplanner.png"
 			video="schoolplanner2.mp4"
-			tags={['2D', 'Graphics', 'Java', 'Scrum']}
+			tags={['Java', 'Graphics', 'Scrum']}
 			github="https://github.com/Somfic/moviez"
 		/>
 	</Item>
 	<Item width={2} height={3}>
 		<Project
-			title="Doolhof generator"
-			description="Een grafische applicatie voor het genereren van doolhoven op een eiland."
+			title="Eiland doolhoven"
+			description="2.5D from-scratch grafische applicatie voor het genereren van doolhoven op procedureel gegenereerde eilanden."
 			locationEmoji="avans.png"
 			location="Avans Hogeschool"
 			image="maze.png"
 			video="maze.mp4"
-			tags={['Java', 'Graphics']}
+			github="https://github.com/Somfic/Infinity-Alphine"
+			tags={['Java', 'Graphics', 'ECS']}
 		/>
 	</Item>
 	<!-- <Item width={2} height={3}>

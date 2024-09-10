@@ -76,6 +76,6 @@
 		border-radius: 10px;
 		margin-right: 1rem;
 
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 	}
 </style>
