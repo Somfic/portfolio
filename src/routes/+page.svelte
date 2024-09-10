@@ -19,23 +19,33 @@
 <Grain />
 
 <main>
-	<Item width={6} height={5}><Me /></Item>
-	<Item width={3} height={2}><ButtonLink type={'github'} /></Item>
-	<Item width={3} height={2}><ButtonLink type={'linkedin'} /></Item>
-	<Item width={6} height={2}><ButtonLink type={'email'} /></Item>
-	<Item width={6} height={2}>
+	<Item width={2} height={2}><Me /></Item>
+	<Item width={1} height={1}><ButtonLink type={'github'} /></Item>
+	<Item width={1} height={1}><ButtonLink type={'linkedin'} /></Item>
+	<Item width={2} height={1}><ButtonLink type={'email'} /></Item>
+	<Item width={4} height={1}>
 		<Scroller>
 			<ScrollerTechItems />
 		</Scroller>
 	</Item>
-	<Item width={6} height={4} padding={0}><Image url="location.png" /></Item>
-	<Item width={6} height={9}>
+	<Item width={2} height={2} padding={0}><Image url="location.png" /></Item>
+	<Item width={2} height={3}>
 		<Project
 			title="Boombot"
 			locationEmoji="school.png"
 			location="Avans Hogeschool"
 			image="boombot.jpg"
 			tags={['Java', 'Hardware']}
+		/>
+	</Item>
+
+	<Item width={2} height={3}>
+		<Project
+			title="Moviez"
+			locationEmoji="school.png"
+			location="Kinepolis"
+			image="moviez.png"
+			tags={['Svelte', 'API']}
 		/>
 	</Item>
 
@@ -61,8 +71,8 @@
 	main {
 		padding: 2rem;
 		display: grid;
-		grid-template-columns: repeat(12, 1fr);
-		grid-auto-rows: 50px;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: 1fr;
 		gap: 1rem;
 		// dense grid
 		grid-auto-flow: dense;

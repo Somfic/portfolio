@@ -2,13 +2,13 @@
 
 <style lang="scss">
 	.halftone {
-		position: absolute;
+		position: fixed;
 		width: 100vw;
 		height: 100vh;
 		top: 0;
 		left: 0;
 		pointer-events: none;
-		
+
 		--color: white;
 
 		--dotSize: 1px;

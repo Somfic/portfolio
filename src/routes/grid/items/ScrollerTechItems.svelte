@@ -70,9 +70,9 @@
 
 <style lang="scss">
 	img {
-		height: calc(100% - 2rem);
+		height: calc(100% - 3rem);
 		background-color: rgb(47, 47, 47, 0.6);
-		padding: 1rem;
+		padding: 1.5rem;
 		border-radius: 10px;
 		margin-right: 1rem;
 

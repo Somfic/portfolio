@@ -25,7 +25,7 @@
 
 <style lang="scss">
 	svg {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		opacity: 0.1;

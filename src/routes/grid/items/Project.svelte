@@ -16,6 +16,7 @@
 	<div class="title">
 		{title}
 	</div>
+
 	<div class="tags">
 		{#each tags as tag}
 			<span class="tag">{tag}</span>
@@ -57,7 +58,8 @@
 	.tags {
 		display: flex;
 		gap: 10px;
-		margin-top: 20px;
+		padding-top: 20px;
+		margin-top: auto;
 
 		.tag {
 			background-color: rgba(255, 255, 255, 0.1);

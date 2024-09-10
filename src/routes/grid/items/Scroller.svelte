@@ -30,7 +30,7 @@
 		max-width: 100%;
 		flex-grow: 1;
 		position: relative;
-		mask-image: linear-gradient(to right, transparent, black 35%, black 65%, transparent);
+		mask-image: linear-gradient(to right, transparent, black 25%, black 75%, transparent);
 	}
 
 	.copied {
@@ -46,7 +46,7 @@
 		display: flex;
 		position: absolute;
 		height: 100%;
-		animation: 60s slide infinite linear;
+		animation: 50s slide infinite linear;
 	}
 	@keyframes slide {
 		from {
