@@ -54,6 +54,7 @@
 			image="boombot.jpg"
 			video="dejavu.mp4"
 			tags={['Java', 'Hardware', 'Scrum']}
+			github="https://github.com/Somfic/1.2-AutomatischGeleidVoertuig"
 		/>
 	</Item>
 
@@ -78,7 +79,7 @@
 			image="schoolplanner.png"
 			video="schoolplanner2.mp4"
 			tags={['Java', 'Graphics', 'Scrum']}
-			github="https://github.com/Somfic/moviez"
+			github="https://github.com/Somfic/1.3-SchoolPlanner"
 		/>
 	</Item>
 	<Item width={2} height={3}>
@@ -102,8 +103,20 @@
 			location="GitHub"
 			image="committer.png"
 			video="committer.mov"
-			github="https://github.com/Somfic/Infinity-Alphine"
+			github="https://github.com/Somfic/committer"
 			tags={['Rust', 'CLI']}
+		/>
+	</Item>
+
+	<Item width={2} height={3}>
+		<Project
+			title="Skool Workshop"
+			description="Full-stack web applicatie voor het beheren van workshops en inschrijvingen voor 'SkoolWorkshop', een workshop-oraganisatie in Breda."
+			locationEmoji="avans.png"
+			location="Avans Hogeschool"
+			image="skoolworkshop.png"
+			github="https://github.com/Somfic/skoolworkshop"
+			tags={['JavaScript', 'Node']}
 		/>
 	</Item>
 	<!-- <Item width={2} height={3}>
