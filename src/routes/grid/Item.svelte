@@ -53,6 +53,8 @@
 		background-color: rgba(255, 255, 255, 0.1);
 		border-radius: 21px;
 
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+
 		//backdrop-filter: blur(10px) saturate(180%) contrast(80%) brightness(120%);
 		position: relative;
 
