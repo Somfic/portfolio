@@ -34,7 +34,7 @@
 	<Item width={2} height={3}>
 		<Project
 			title="EliteAPI"
-			description=".NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair bij streamers om stemcommando's te gebruiken."
+			description=".NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair bij Twitch-streamers om stemcommando's te gebruiken."
 			locationEmoji="school.png"
 			location="GitHub"
 			image="eliteapi.png"
@@ -73,7 +73,7 @@
 		<Project
 			title="Schoolplanner"
 			description="2D from-scratch grafische applicatie voor het plannen van schoolroosters en het simuleren van drukte op de gangen en in klaslokalen."
-			locationEmoji="school.png"
+			locationEmoji="avans.png"
 			location="Avans Hogeschool"
 			image="schoolplanner.png"
 			video="schoolplanner2.mp4"
@@ -91,6 +91,19 @@
 			video="maze.mp4"
 			github="https://github.com/Somfic/Infinity-Alphine"
 			tags={['Java', 'Graphics', 'ECS']}
+		/>
+	</Item>
+
+	<Item width={2} height={3}>
+		<Project
+			title="Committer"
+			description="CLI tool om consistente commit-berichten te genereren volgens de Gitmoji richtlijnen."
+			locationEmoji="avans.png"
+			location="GitHub"
+			image="committer.png"
+			video="committer.mov"
+			github="https://github.com/Somfic/Infinity-Alphine"
+			tags={['Rust', 'CLI']}
 		/>
 	</Item>
 	<!-- <Item width={2} height={3}>

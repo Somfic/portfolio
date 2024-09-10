@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	export let title: string;
 	export let description: string;
 	export let image: string;
@@ -11,6 +13,50 @@
 	export let stars: string | undefined = undefined;
 	export let downloads: string | undefined = undefined;
 	export let streamers: string | undefined = undefined;
+
+	let duration = 0;
+	let videoElement: HTMLVideoElement | undefined;
+	let shouldPlay = false;
+	onMount(() => {
+		// Play the video if the mouse is < 500px from the center of the video
+		const playVideo = (x: number, y: number) => {
+			if (!videoElement) return;
+
+			const rect = videoElement.getBoundingClientRect();
+			const centerX = rect.left + rect.width / 2;
+			const centerY = rect.top + rect.height / 2;
+			const distance = Math.sqrt((centerX - x) ** 2 + (centerY - y) ** 2);
+
+			if (distance > 500) {
+				shouldPlay = false;
+				videoElement!.pause();
+			} else if (!shouldPlay) {
+				shouldPlay = true;
+
+				if (!isNaN(videoElement.duration)) {
+					duration = videoElement.duration;
+				} else {
+					videoElement.addEventListener('loadedmetadata', () => {
+						duration = videoElement!.duration;
+					});
+				}
+
+				videoElement.currentTime = Math.random() * duration;
+				videoElement?.play();
+			}
+		};
+
+		const handleMouseMove = (e: MouseEvent) => {
+			playVideo(e.clientX, e.clientY);
+		};
+
+		if (video) {
+			document.addEventListener('mousemove', handleMouseMove);
+			document.addEventListener('scroll', () =>
+				playVideo(window.innerWidth / 2, window.innerHeight / 2)
+			);
+		}
+	});
 </script>
 
 <div class="project">
@@ -31,8 +77,14 @@
 	{/if}
 	<div class="media" class:video>
 		{#if video}
-			<video autoplay muted loop playsinline>
-				<source src={`/${video}`} />
+			<video
+				bind:this={videoElement}
+				src={shouldPlay ? `/${video}` : '#'}
+				autoplay
+				muted
+				loop
+				playsinline
+			>
 			</video>
 		{/if}
 		<img src={`/${image}`} alt={title} />
