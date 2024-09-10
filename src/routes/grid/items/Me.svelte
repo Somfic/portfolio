@@ -27,7 +27,7 @@
 
 		h1 {
 			font-weight: 800;
-			font-size: 2rem;
+			font-size: 2.5rem;
 			display: flex;
 			flex-grow: 1;
 			text-align: center;

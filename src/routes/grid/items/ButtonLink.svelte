@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let type: 'github' | 'email' | 'linkedin';
+	export let link: string;
 </script>
 
-<div class="button">
+<a class="button" href={link} target="_blank" rel="noopener noreferrer">
 	{#if type === 'github'}
 		<img src="/github.svg" alt="" />
 	{:else if type === 'linkedin'}
@@ -10,7 +11,7 @@
 	{:else if type === 'email'}
 		<img src="/email.svg" alt="" />
 	{/if}
-</div>
+</a>
 
 <style lang="scss">
 	.button {
@@ -23,6 +24,8 @@
 		&:hover {
 			cursor: auto;
 		}
+
+		z-index: 9999;
 	}
 
 	img {

@@ -1,4 +1,19 @@
-<div class="halftone"></div>
+<script lang="ts">
+	import { onMount } from 'svelte';
+
+	onMount(() => {
+		document.addEventListener('scroll', onScroll);
+	});
+
+	let element: HTMLDivElement;
+
+	function onScroll() {
+		const scroll = window.scrollY;
+		element.style.setProperty('--bgPosition', `${-scroll / 3}px`);
+	}
+</script>
+
+<div class="halftone" bind:this={element}></div>
 
 <style lang="scss">
 	.halftone {
@@ -13,18 +28,14 @@
 
 		--dotSize: 1px;
 		--bgSize: 50px;
-		--bgPosition: calc(var(--bgSize) / 2);
 		--bgColor: rgba(255, 255, 255, 0.1);
 
 		background-image: radial-gradient(
-				circle at center,
-				var(--bgColor) var(--dotSize),
-				transparent 0
-			),
-			radial-gradient(circle at center, var(--bgColor) var(--dotSize), transparent 0);
+			circle at center,
+			var(--bgColor) var(--dotSize),
+			transparent 0
+		);
 		background-size: var(--bgSize) var(--bgSize);
-		background-position:
-			0 0,
-			var(--bgPosition) var(--bgPosition);
+		background-position: 0 var(--bgPosition);
 	}
 </style>

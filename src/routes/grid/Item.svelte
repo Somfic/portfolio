@@ -53,11 +53,16 @@
 		background-color: rgba(255, 255, 255, 0.1);
 		border-radius: 21px;
 
-		backdrop-filter: blur(10px) saturate(180%) contrast(80%) brightness(120%);
+		//backdrop-filter: blur(10px) saturate(180%) contrast(80%) brightness(120%);
 		position: relative;
 
 		grid-column: span var(--width, 1);
 		grid-row: span var(--height, 1);
+
+		// When on mobile, make the card full width
+		@media (max-width: 600px) {
+			grid-column: span 12;
+		}
 
 		&:hover > .content-wrapper {
 			background-color: rgba(0, 0, 0, 0.8);
@@ -78,7 +83,7 @@
 			// );
 			// background: linear-gradient(to right, blue, transparent),
 			// 	url(https://grainy-gradients.vercel.app/noise.svg);
-			background-color: rgba(12, 12, 12, 0.8);
+			background-color: rgba(12, 12, 12, 0.6);
 			border-radius: 19px;
 			margin: 1px;
 			height: calc(100% - 2px);
