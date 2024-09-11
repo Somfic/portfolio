@@ -147,6 +147,19 @@
 			tags={['JavaScript', 'Node', 'MySQL']}
 		/>
 	</Item>
+
+	<Item width={6} width_m={12} height={3}>
+		<Project
+			title="Elektronische deurbel"
+			description="Een elektronische deurbel met een ESP32 microcontroller die audioberichten kan opnemen en afspelen, en via een internetconnectie de radio kan afspelen."
+			locationEmoji="avans.png"
+			location="Avans Hogeschool"
+			image="dingdong.jpg"
+			video="dingdong.mp4"
+			github="https://github.com/Somfic/skoolworkshop"
+			tags={['C++', 'Hardware', 'Scrum']}
+		/>
+	</Item>
 	<!-- <Item width={2} height={3}>
 		<Project
 			title="Dice Arcade Game"
