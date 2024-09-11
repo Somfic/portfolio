@@ -1,13 +1,13 @@
 <div class="me">
 	<div class="header">
 		<img src="/me.jpeg" alt="" />
-		<h1><span>Lucas de Jong</span></h1>
+		<h1>Lucas de Jong</h1>
 	</div>
 
 	<div>
 		<p>
 			Hoi! Ik ben een gepassioneerde full-stack software-developer geintresseerd in mooie interfaces
-			met goedwerkende backend-systemen.
+			en goedwerkende backend-systemen.
 		</p>
 	</div>
 </div>
@@ -25,6 +25,12 @@
 		flex-grow: 1;
 		justify-content: space-between;
 
+		// When the screen is small
+		@media (max-width: 900px) {
+			flex-direction: column;
+			align-items: center;
+		}
+
 		h1 {
 			font-weight: 800;
 			font-size: 2.5rem;
@@ -32,12 +38,13 @@
 			flex-grow: 1;
 			text-align: center;
 			justify-content: center;
+			align-items: center;
 		}
 
 		img {
 			border-radius: 50%;
-			width: 100px;
-			height: 100px;
+			width: 200px;
+			height: 200px;
 			z-index: 20;
 			box-shadow:
 				inset 1px 4px 6px rgba(0, 0, 0, 0.4),

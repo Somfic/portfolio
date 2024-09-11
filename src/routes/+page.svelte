@@ -20,19 +20,25 @@
 <Grain />
 
 <main>
-	<Item width={2} height={2}><Me /></Item>
-	<Item width={1} height={1}><ButtonLink type="github" link="https://github.com/Somfic" /></Item>
-	<Item width={1} height={1}>
-		<ButtonLink type="linkedin" link="https://www.linkedin.com/in/lvdejong/" /></Item
+	<Item width={6} width_m={8} height={2}>
+		<Me />
+	</Item>
+	<Item width={3} width_m={4} height={1}>
+		<ButtonLink type="github" link="https://github.com/Somfic" />
+	</Item>
+	<Item width={3} width_m={4} height={1}>
+		<ButtonLink type="linkedin" link="https://www.linkedin.com/in/lvdejong/" />
+	</Item>
+	<Item width={6} width_m={6} height={1}
+		><ButtonLink type="email" link="mailto:lucas@somfic.dev" /></Item
 	>
-	<Item width={2} height={1}><ButtonLink type="email" link="mailto:lucas@somfic.dev" /></Item>
-	<Item width={4} height={1}>
+	<Item width={12} width_m={12} height={1}>
 		<Scroller>
 			<ScrollerTechItems />
 		</Scroller>
 	</Item>
-
-	<Item width={3} height={1}>
+	<Item width={3} width_m={6} height={1}><p>idk what to put here</p></Item>
+	<Item width={9} width_m={8} height={1}>
 		<div class="experience">
 			<Experience
 				title="HBO Technische Informatica"
@@ -50,8 +56,10 @@
 			/>
 		</div>
 	</Item>
-	<Item width={2} height={2} padding={0}><Image url="location.png" /></Item>
-	<Item width={2} height={3}>
+	<Item width={6} width_m={4} height={2} height_m={1} padding={0}>
+		<Image url="location.png" />
+	</Item>
+	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="EliteAPI"
 			description=".NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair bij Twitch-streamers om stemcommando's te gebruiken."
@@ -65,7 +73,7 @@
 			streamers="10+"
 		/>
 	</Item>
-	<Item width={2} height={3}>
+	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="Boebot"
 			description="Een robot die door middel van meerdere sensoren zelfstandig lijnen kan volgen, obstakels kan ontwijken en vracht kan vervoeren."
@@ -78,7 +86,7 @@
 		/>
 	</Item>
 
-	<Item width={2} height={3}>
+	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="Moviez"
 			description="Een webapplicatie met een overzicht van films die in mijn lokale bioscoop draaien, aangestuurd door de Kinepolis API."
@@ -90,7 +98,7 @@
 			github="https://github.com/Somfic/moviez"
 		/>
 	</Item>
-	<Item width={2} height={3}>
+	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="Schoolplanner"
 			description="2D from-scratch grafische applicatie voor het plannen van schoolroosters en het simuleren van drukte op de gangen en in klaslokalen."
@@ -102,7 +110,7 @@
 			github="https://github.com/Somfic/1.3-SchoolPlanner"
 		/>
 	</Item>
-	<Item width={2} height={3}>
+	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="Eiland doolhoven"
 			description="2.5D from-scratch grafische applicatie voor het genereren van doolhoven op procedureel gegenereerde eilanden."
@@ -115,7 +123,7 @@
 		/>
 	</Item>
 
-	<Item width={2} height={3}>
+	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="Committer"
 			description="CLI tool om consistente commit-berichten te genereren volgens de Gitmoji richtlijnen."
@@ -128,7 +136,7 @@
 		/>
 	</Item>
 
-	<Item width={2} height={3}>
+	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="Skool Workshop"
 			description="Full-stack web applicatie voor het beheren van workshops en inschrijvingen voor 'SkoolWorkshop', een workshop-oraganisatie in Breda."
@@ -190,17 +198,18 @@
 	main {
 		padding: 2rem;
 		display: grid;
-		grid-auto-columns: repeat(4, 1fr);
+
 		grid-auto-rows: 1fr;
+		grid-template-columns: repeat(12, 1fr);
+
 		gap: 1rem;
 		// dense grid
 		grid-auto-flow: dense;
-
 		max-width: 999px;
 
 		// When on tablet
-		@media (max-width: 800px) {
-			grid-auto-columns: 1fr;
+		@media (min-width: 999px) {
+			grid-auto-columns: 1fr 1fr;
 		}
 	}
 </style>

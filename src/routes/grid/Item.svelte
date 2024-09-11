@@ -8,7 +8,13 @@
 
 	export let padding = 30;
 	export let width: number;
+	export let width_m: number = width;
+	export let width_s: number = 12;
+
 	export let height: number;
+	export let height_m: number = height;
+
+	let rotate = (Math.random() - 0.5) * 2;
 
 	onMount(() => {
 		window.addEventListener('mousemove', onMouseMove);
@@ -16,11 +22,17 @@
 		element.style.setProperty('--paddingX', `${padding * 1.15}px`);
 		element.style.setProperty('--paddingY', `${padding}px`);
 
-		element.style.setProperty('--x', `0px`);
-		element.style.setProperty('--y', `0px`);
+		element.style.setProperty('--x', `-1000px`);
+		element.style.setProperty('--y', `-1000px`);
 
-		element.style.setProperty('--width', `0px`);
-		element.style.setProperty('--height', `0px`);
+		element.style.setProperty('--width', `${width}`);
+		element.style.setProperty('--width-m', `${width_m}`);
+		element.style.setProperty('--width-s', `${width_s}`);
+
+		element.style.setProperty('--height', `${height}`);
+		element.style.setProperty('--height-m', `${height_m}`);
+
+		element.style.setProperty('--rotate', `${rotate}deg`);
 	});
 
 	function onMouseMove(event: MouseEvent) {
@@ -32,9 +44,6 @@
 
 		element.style.setProperty('--x', `${x}px`);
 		element.style.setProperty('--y', `${y}px`);
-
-		element.style.setProperty('--width', `${width}`);
-		element.style.setProperty('--height', `${height}`);
 	}
 </script>
 
@@ -52,8 +61,8 @@
 	.card {
 		background-color: rgba(255, 255, 255, 0.1);
 		border-radius: 21px;
-
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+		transition: all 200ms ease;
 
 		//backdrop-filter: blur(10px) saturate(180%) contrast(80%) brightness(120%);
 		position: relative;
@@ -61,13 +70,23 @@
 		grid-column: span var(--width, 1);
 		grid-row: span var(--height, 1);
 
-		// When on mobile, make the card full width
-		@media (max-width: 600px) {
-			grid-column: span 12;
+		// On tablet
+		@media (max-width: 900px) {
+			grid-column: span var(--width-m, 1);
+			grid-row: span var(--height-m, 1);
 		}
 
-		&:hover > .content-wrapper {
-			background-color: rgba(0, 0, 0, 0.8);
+		// On mobile
+		@media (max-width: 600px) {
+			grid-column: span var(--width-s, 1);
+		}
+
+		&:hover {
+			transform: scale(1.005);
+
+			> .content-wrapper {
+				background-color: rgb(43, 43, 43);
+			}
 		}
 
 		> .content-wrapper {
@@ -92,7 +111,7 @@
 			max-width: calc(100% - 2px);
 			z-index: 2;
 			overflow: hidden;
-			transition: background-color 500ms;
+			transition: all 500ms;
 
 			.content {
 				display: flex;

@@ -1,21 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	let width = 0;
-	let height = 0;
-
-	onMount(() => {
-		document.addEventListener('resize', onResize);
-		onResize();
-	});
-
-	function onResize() {
-		width = window.innerWidth * 1;
-		height = window.innerHeight * 1;
-	}
+	let width = 10000;
+	let height = 10000;
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" on:resize={onresize}>
 	<filter id="noise" x="0" y="0">
 		<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="1" />
 		<feBlend mode="screen" />
