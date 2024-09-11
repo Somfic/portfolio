@@ -27,21 +27,11 @@
 			const centerY = rect.top + rect.height / 2;
 			const distance = Math.sqrt((centerX - x) ** 2 + (centerY - y) ** 2);
 
-			if (distance > 500) {
+			if (distance > 500 && shouldPlay) {
 				shouldPlay = false;
 				videoElement!.pause();
-			} else if (!shouldPlay) {
+			} else if (distance <= 500 && !shouldPlay) {
 				shouldPlay = true;
-
-				if (!isNaN(videoElement.duration)) {
-					duration = videoElement.duration;
-				} else {
-					videoElement.addEventListener('loadedmetadata', () => {
-						duration = videoElement!.duration;
-					});
-				}
-
-				videoElement.currentTime = Math.random() * duration;
 				videoElement?.play();
 			}
 		};
@@ -77,15 +67,7 @@
 	{/if}
 	<div class="media" class:video>
 		{#if video}
-			<video
-				bind:this={videoElement}
-				src={shouldPlay ? `/${video}` : '#'}
-				autoplay
-				muted
-				loop
-				playsinline
-			>
-			</video>
+			<video bind:this={videoElement} src={`/${video}`} autoplay muted loop playsinline> </video>
 		{/if}
 		<img src={`/${image}`} alt={title} />
 	</div>
