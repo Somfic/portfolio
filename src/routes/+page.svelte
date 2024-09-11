@@ -37,7 +37,6 @@
 			<ScrollerTechItems />
 		</Scroller>
 	</Item>
-	<Item width={3} width_m={6} height={1}><p>idk what to put here</p></Item>
 	<Item width={9} width_m={8} height={1}>
 		<div class="experience">
 			<Experience
@@ -56,7 +55,8 @@
 			/>
 		</div>
 	</Item>
-	<Item width={6} width_m={4} height={2} height_m={1} padding={0}>
+	<Item width={3} width_m={6} height={1} padding={1}><Image fit="cover" url="walle2.gif" /></Item>
+	<Item width={6} width_m={4} height={2} height_m={1} padding={1}>
 		<Image url="location.png" />
 	</Item>
 	<Item width={6} width_m={12} height={3}>
