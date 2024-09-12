@@ -112,7 +112,7 @@
 			locationEmoji="school.png"
 			location="GitHub"
 			image="moviez.png"
-			video="moviez.mp4"
+			video="compressed_moviez.mp4"
 			tags={['TypeScript', 'Svelte', 'SASS']}
 			github="https://github.com/Somfic/moviez"
 		/>
@@ -124,7 +124,7 @@
 			locationEmoji="avans.png"
 			location="Avans Hogeschool"
 			image="schoolplanner.png"
-			video="schoolplanner2.mp4"
+			video="compressed_schoolplanner2.mp4"
 			tags={['Java', 'Graphics', 'Scrum']}
 			github="https://github.com/Somfic/1.3-SchoolPlanner"
 		/>
@@ -136,7 +136,7 @@
 			locationEmoji="avans.png"
 			location="Avans Hogeschool"
 			image="maze.png"
-			video="maze.mp4"
+			video="compressed_maze.mp4"
 			github="https://github.com/Somfic/Infinity-Alphine"
 			tags={['Java', 'Graphics', 'ECS']}
 		/>
@@ -149,7 +149,7 @@
 			locationEmoji="avans.png"
 			location="GitHub"
 			image="committer.png"
-			video="committer.mov"
+			video="compressed_committer.mp4"
 			github="https://github.com/Somfic/committer"
 			tags={['Rust', 'CLI']}
 			media_position="left"
@@ -175,7 +175,7 @@
 			locationEmoji="avans.png"
 			location="Avans Hogeschool"
 			image="dingdong.jpg"
-			video="dingdong.mp4"
+			video="compressed_dingdong.mp4"
 			github="https://github.com/Somfic/skoolworkshop"
 			tags={['C++', 'Hardware', 'Scrum']}
 		/>
@@ -201,7 +201,7 @@
 			locationEmoji="avans.png"
 			location="GitHub"
 			image="spotivibe.png"
-			video="spotivibe.mp4"
+			video="compressed_spotivibe.mp4"
 			github="https://github.com/Somfic/vibes"
 			tags={['Vue', 'JavaScript', 'Three.js']}
 			media_position="left"
