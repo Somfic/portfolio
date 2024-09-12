@@ -45,6 +45,7 @@
 	.content {
 		display: flex;
 		position: absolute;
+		align-items: center;
 		height: 100%;
 		animation: 30s slide infinite linear;
 	}

@@ -86,6 +86,7 @@
 <style lang="scss">
 	img {
 		height: calc(100% - 3rem);
+		max-height: 80px;
 		background-color: rgb(47, 47, 47, 0.6);
 		padding: 1.5rem;
 		border-radius: 20px;
