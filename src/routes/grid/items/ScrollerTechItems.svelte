@@ -78,10 +78,7 @@
 	alt="Bun"
 />
 
-<img
-	src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-823jqxdr.png"
-	alt="GitHub"
-/>
+<img src="/github.svg" alt="GitHub" />
 
 <style lang="scss">
 	img {
