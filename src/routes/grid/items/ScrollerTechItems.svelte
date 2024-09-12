@@ -49,7 +49,7 @@
 />
 
 <img
-	src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg"
+	src="https://miro.medium.com/v2/resize:fit:786/format:webp/1*5GTKx0a2tf7mAMYnplvBeg.png"
 	alt="Rust"
 />
 
@@ -68,14 +68,28 @@
 	alt="MySQL"
 />
 
+<img
+	src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
+	alt="Node.js"
+/>
+
+<img
+	src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bun/bun-original.svg"
+	alt="Bun"
+/>
+
+<img
+	src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-823jqxdr.png"
+	alt="GitHub"
+/>
+
 <style lang="scss">
 	img {
 		height: calc(100% - 3rem);
 		background-color: rgb(47, 47, 47, 0.6);
 		padding: 1.5rem;
-		border-radius: 10px;
+		border-radius: 20px;
 		margin-right: 1rem;
-
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 	}
 </style>

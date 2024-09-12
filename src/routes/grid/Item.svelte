@@ -85,7 +85,7 @@
 			transform: scale(1.005);
 
 			> .content-wrapper {
-				background-color: rgb(43, 43, 43);
+				background-color: rgb(22, 22, 22);
 			}
 		}
 

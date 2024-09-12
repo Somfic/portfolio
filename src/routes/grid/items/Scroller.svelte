@@ -46,7 +46,7 @@
 		display: flex;
 		position: absolute;
 		height: 100%;
-		animation: 50s slide infinite linear;
+		animation: 30s slide infinite linear;
 	}
 	@keyframes slide {
 		from {

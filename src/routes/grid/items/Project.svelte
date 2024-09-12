@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import ProjectTag from './ProjectTag.svelte';
 
 	export let title: string;
 	export let description: string;
@@ -94,7 +95,7 @@
 
 	<div class="tags">
 		{#each tags as tag}
-			<span class="tag">{tag}</span>
+			<ProjectTag {tag} />
 		{/each}
 	</div>
 </div>
@@ -210,13 +211,5 @@
 		gap: 10px;
 		padding-top: 20px;
 		margin-top: auto;
-
-		.tag {
-			background-color: rgba(255, 255, 255, 0.1);
-			border-radius: 10px;
-			padding: 5px 10px;
-			font-size: 0.8rem;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-		}
 	}
 </style>

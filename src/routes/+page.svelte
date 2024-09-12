@@ -8,7 +8,6 @@
 	import Image from './grid/items/Image.svelte';
 	import Me from './grid/items/Me.svelte';
 	import Scroller from './grid/items/Scroller.svelte';
-	import ScrollerPortfolioItem from './grid/items/ScrollerPortfolioItem.svelte';
 	import ScrollerTechItems from './grid/items/ScrollerTechItems.svelte';
 	import Skull from './grid/items/Skull.svelte';
 	import Project from './grid/items/Project.svelte';
@@ -62,7 +61,7 @@
 	<Item width={6} width_m={12} height={3}>
 		<Project
 			title="EliteAPI"
-			description=".NET library voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair bij Twitch-streamers om stemcommando's te gebruiken."
+			description=".NET API voor het communiceren met het ruimte-spel 'Elite: Dangerous'. Populair bij Twitch-streamers om stemcommando's te gebruiken."
 			locationEmoji="school.png"
 			location="GitHub"
 			image="eliteapi.png"
@@ -94,7 +93,7 @@
 			location="GitHub"
 			image="moviez.png"
 			video="moviez.mp4"
-			tags={['Typescript', 'Svelte', 'SCSS', 'API']}
+			tags={['TypeScript', 'Svelte', 'SASS', 'API']}
 			github="https://github.com/Somfic/moviez"
 		/>
 	</Item>
@@ -144,7 +143,7 @@
 			location="Avans Hogeschool"
 			image="skoolworkshop.png"
 			github="https://github.com/Somfic/skoolworkshop"
-			tags={['JavaScript', 'Node', 'MySQL']}
+			tags={['JavaScript', 'Node.js', 'MySQL']}
 		/>
 	</Item>
 
@@ -158,6 +157,32 @@
 			video="dingdong.mp4"
 			github="https://github.com/Somfic/skoolworkshop"
 			tags={['C++', 'Hardware', 'Scrum']}
+		/>
+	</Item>
+
+	<Item width={6} width_m={12} height={3}>
+		<Project
+			title="ed-journal"
+			description="Een EliteAPI rewrite in Rust. Gebruikt om speler-gegevens van het ruimte-spel 'Elite: Dangerous' te analyseren en intressante informatie te extraheren."
+			locationEmoji="avans.png"
+			location="GitHub"
+			image="edjournal.jpg"
+			github="https://github.com/rster2002/ed-journals"
+			tags={['Rust']}
+			stars="2"
+		/>
+	</Item>
+
+	<Item width={6} width_m={12} height={3}>
+		<Project
+			title="Spotivibe"
+			description="Een webapplicatie die de Spotify API gebruikt om muziek live te visualiseren met lichteffecten gebaseerd op tempo, beats en stemming in een 3D-omgeving met Three.js."
+			locationEmoji="avans.png"
+			location="GitHub"
+			image="spotivibe.png"
+			video="spotivibe.mp4"
+			github="https://github.com/Somfic/vibes"
+			tags={['Vue', 'JavaScript', 'Three.js']}
 		/>
 	</Item>
 	<!-- <Item width={2} height={3}>
