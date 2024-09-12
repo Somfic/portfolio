@@ -93,7 +93,7 @@
 			location="GitHub"
 			image="moviez.png"
 			video="moviez.mp4"
-			tags={['TypeScript', 'Svelte', 'SASS', 'API']}
+			tags={['TypeScript', 'Svelte', 'SASS']}
 			github="https://github.com/Somfic/moviez"
 		/>
 	</Item>
@@ -132,6 +132,7 @@
 			video="committer.mov"
 			github="https://github.com/Somfic/committer"
 			tags={['Rust', 'CLI']}
+			media_position="left"
 		/>
 	</Item>
 
@@ -183,6 +184,7 @@
 			video="spotivibe.mp4"
 			github="https://github.com/Somfic/vibes"
 			tags={['Vue', 'JavaScript', 'Three.js']}
+			media_position="left"
 		/>
 	</Item>
 	<!-- <Item width={2} height={3}>
@@ -234,7 +236,7 @@
 	}
 
 	main {
-		padding: 2rem;
+		padding: 10rem 1rem;
 		display: grid;
 
 		grid-auto-rows: 1fr;

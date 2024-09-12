@@ -14,6 +14,7 @@
 	export let stars: string | undefined = undefined;
 	export let downloads: string | undefined = undefined;
 	export let streamers: string | undefined = undefined;
+	export let media_position: 'left' | 'right' | 'center' = 'center';
 
 	let duration = 0;
 	let videoElement: HTMLVideoElement | undefined;
@@ -37,8 +38,11 @@
 			}
 		};
 
+		let timeout: number;
+
 		const handleMouseMove = (e: MouseEvent) => {
-			playVideo(e.clientX, e.clientY);
+			clearTimeout(timeout);
+			timeout = setTimeout(() => playVideo(e.clientX, e.clientY), 100);
 		};
 
 		if (video) {
@@ -68,9 +72,17 @@
 	{/if}
 	<div class="media" class:video>
 		{#if video}
-			<video bind:this={videoElement} src={`/${video}`} autoplay muted loop playsinline> </video>
+			<video
+				style:object-position={media_position}
+				bind:this={videoElement}
+				src={`/${video}`}
+				muted
+				loop
+				playsinline
+			>
+			</video>
 		{/if}
-		<img src={`/${image}`} alt={title} />
+		<img style:object-position={media_position} src={`/${image}`} alt={title} />
 	</div>
 	<div class="subtitle">
 		{#if location != 'GitHub'}

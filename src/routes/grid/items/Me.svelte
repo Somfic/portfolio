@@ -1,6 +1,6 @@
 <div class="me">
 	<div class="header">
-		<img src="/me.jpeg" alt="" />
+		<img src="/ikke4.png" alt="" />
 		<h1>Lucas de Jong</h1>
 	</div>
 
