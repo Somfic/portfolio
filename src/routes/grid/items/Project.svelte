@@ -21,17 +21,17 @@
 
 	function playVideo() {
 		if (videoElement) {
-			clearTimeout(unloadTimeout);
 			videoElement.src = `/${video}`;
+			if (!isNaN(videoElement.duration)) {
+				videoElement.currentTime = Math.random() * videoElement.duration;
+			}
 			videoElement.play();
 		}
 	}
 
 	function stopVideo() {
 		if (videoElement) {
-			setTimeout(() => {
-				videoElement!.pause();
-			}, 1000);
+			videoElement!.pause();
 		}
 	}
 </script>
