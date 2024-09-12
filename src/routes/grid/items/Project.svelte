@@ -16,45 +16,26 @@
 	export let streamers: string | undefined = undefined;
 	export let media_position: 'left' | 'right' | 'center' = 'center';
 
-	let duration = 0;
+	let unloadTimeout: number;
 	let videoElement: HTMLVideoElement | undefined;
-	let shouldPlay = false;
-	onMount(() => {
-		// Play the video if the mouse is < 500px from the center of the video
-		const playVideo = (x: number, y: number) => {
-			if (!videoElement) return;
 
-			const rect = videoElement.getBoundingClientRect();
-			const centerX = rect.left + rect.width / 2;
-			const centerY = rect.top + rect.height / 2;
-			const distance = Math.sqrt((centerX - x) ** 2 + (centerY - y) ** 2);
-
-			if (distance > 500 && shouldPlay) {
-				shouldPlay = false;
-				videoElement!.pause();
-			} else if (distance <= 500 && !shouldPlay) {
-				shouldPlay = true;
-				videoElement?.play();
-			}
-		};
-
-		let timeout: number;
-
-		const handleMouseMove = (e: MouseEvent) => {
-			clearTimeout(timeout);
-			timeout = setTimeout(() => playVideo(e.clientX, e.clientY), 500);
-		};
-
-		if (video) {
-			document.addEventListener('mousemove', handleMouseMove);
-			document.addEventListener('scroll', () =>
-				playVideo(window.innerWidth / 2, window.innerHeight / 2)
-			);
+	function playVideo() {
+		if (videoElement) {
+			clearTimeout(unloadTimeout);
+			videoElement.src = `/${video}`;
 		}
-	});
+	}
+
+	function stopVideo() {
+		if (videoElement) {
+			setTimeout(() => {
+				videoElement!.src = '';
+			}, 1000);
+		}
+	}
 </script>
 
-<div class="project">
+<div class="project" on:mouseenter={playVideo} on:mouseleave={stopVideo}>
 	{#if stars}
 		<div class="stars">
 			{stars} <img src="/star.png" alt="" />
@@ -78,6 +59,7 @@
 				src={`/${video}`}
 				muted
 				loop
+				autoplay
 				playsinline
 			>
 			</video>
@@ -176,6 +158,11 @@
 		position: relative;
 		width: 100%;
 		height: 250px;
+
+		background-image: url('/spinner.svg');
+		background-size: 50px;
+		background-position: center;
+		background-repeat: no-repeat;
 
 		img,
 		video {
