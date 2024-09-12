@@ -42,7 +42,7 @@
 
 		const handleMouseMove = (e: MouseEvent) => {
 			clearTimeout(timeout);
-			timeout = setTimeout(() => playVideo(e.clientX, e.clientY), 100);
+			timeout = setTimeout(() => playVideo(e.clientX, e.clientY), 500);
 		};
 
 		if (video) {

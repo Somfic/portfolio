@@ -3,9 +3,6 @@
 
 	let element: HTMLDivElement;
 
-	let mouseX = 0;
-	let mouseY = 0;
-
 	export let padding = 30;
 	export let width: number;
 	export let width_m: number = width;
@@ -14,11 +11,12 @@
 	export let height: number;
 	export let height_m: number = height;
 
+	export let mouseX: number;
+	export let mouseY: number;
+
 	let rotate = (Math.random() - 0.5) * 2;
 
 	onMount(() => {
-		window.addEventListener('mousemove', onMouseMove);
-
 		element.style.setProperty('--paddingX', `${padding * 1.15}px`);
 		element.style.setProperty('--paddingY', `${padding}px`);
 
@@ -35,15 +33,11 @@
 		element.style.setProperty('--rotate', `${rotate}deg`);
 	});
 
-	function onMouseMove(event: MouseEvent) {
-		mouseX = event.clientX;
-		mouseY = event.clientY;
+	$: {
+		let bounding = element?.getBoundingClientRect();
 
-		const x = mouseX - element.getBoundingClientRect().left;
-		const y = mouseY - element.getBoundingClientRect().top;
-
-		element.style.setProperty('--x', `${x}px`);
-		element.style.setProperty('--y', `${y}px`);
+		element?.style.setProperty('--x', `${mouseX - bounding.left}px`);
+		element?.style.setProperty('--y', `${mouseY - bounding.top}px`);
 	}
 </script>
 
