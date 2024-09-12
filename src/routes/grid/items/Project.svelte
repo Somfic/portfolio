@@ -23,13 +23,14 @@
 		if (videoElement) {
 			clearTimeout(unloadTimeout);
 			videoElement.src = `/${video}`;
+			videoElement.play();
 		}
 	}
 
 	function stopVideo() {
 		if (videoElement) {
 			setTimeout(() => {
-				videoElement!.src = '';
+				videoElement!.pause();
 			}, 1000);
 		}
 	}
