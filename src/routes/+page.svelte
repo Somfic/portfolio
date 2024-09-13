@@ -41,14 +41,14 @@
 		<Me />
 	</Item>
 	<Item width={3} width_m={4} height={1} {mouseX} {mouseY}>
-		<ButtonLink type="github" link="https://github.com/Somfic" />
+		<ButtonLink type="github" link="https://github.com/Somfic" subtitle="@somfic" />
 	</Item>
 	<Item width={3} width_m={4} height={1} {mouseX} {mouseY}>
-		<ButtonLink type="linkedin" link="https://www.linkedin.com/in/lvdejong/" />
+		<ButtonLink type="linkedin" link="https://www.linkedin.com/in/lvdejong/" subtitle="@lvdejong" />
 	</Item>
-	<Item width={6} width_m={6} height={1} {mouseX} {mouseY}
-		><ButtonLink type="email" link="mailto:lucas@somfic.dev" /></Item
-	>
+	<Item width={6} width_m={6} height={1} {mouseX} {mouseY}>
+		<ButtonLink type="email" link="mailto:lucas@somfic.dev" subtitle="lucas@somfic.dev" />
+	</Item>
 	<Item width={12} width_m={12} height={1} {mouseX} {mouseY}>
 		<Scroller>
 			<ScrollerTechItems />

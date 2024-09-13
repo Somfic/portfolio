@@ -85,7 +85,10 @@
 		{description}
 	</div>
 	{#if github}
-		<a href={github} target="_blank" rel="noopener noreferrer">Github</a>
+		<a class="github" href={github} target="_blank" rel="noopener noreferrer">
+			<img src="/github.svg " alt="" />
+			Github</a
+		>
 	{/if}
 
 	<div class="tags">
@@ -152,6 +155,35 @@
 			box-shadow: 0 0 10px transparentize($accent, 0.5);
 			border: 2px solid $accent;
 			transform: rotate(2deg) translate(12px, 44px);
+		}
+	}
+
+	.github {
+		margin: 1rem 0;
+		color: white;
+		background-color: rgb(68, 68, 68);
+		padding: 10px;
+		border-radius: 10px;
+		text-align: center;
+		text-decoration: none;
+		transition: background-color 200ms;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+
+		img {
+			height: 1.5em;
+			width: auto;
+		}
+
+		&:hover {
+			background-color: rgb(88, 88, 88);
+		}
+
+		&:active {
+			background-color: rgb(108, 108, 108);
 		}
 	}
 
