@@ -73,7 +73,7 @@
 		</div>
 	</Item>
 	<Item width={3} width_m={6} height={1} padding={1} {mouseX} {mouseY}>
-		<Image fit="cover" url="walle2.gif" />
+		<Image fit="cover" url="kleuter.jpg" />
 	</Item>
 	<Item width={6} width_m={4} height={2} height_m={1} padding={1} {mouseX} {mouseY}>
 		<Image url="location.png" />
