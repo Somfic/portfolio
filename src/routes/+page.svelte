@@ -12,6 +12,7 @@
 	import Skull from './grid/items/Skull.svelte';
 	import Project from './grid/items/Project.svelte';
 	import Experience from './grid/items/Experience.svelte';
+	import Music from './grid/items/Music.svelte';
 
 	let mouseX = -1000;
 	let mouseY = -1000;
@@ -73,7 +74,7 @@
 		</div>
 	</Item>
 	<Item width={3} width_m={6} height={1} padding={1} {mouseX} {mouseY}>
-		<Image fit="cover" url="kleuter.jpg" />
+		<Music />
 	</Item>
 	<Item width={6} width_m={4} height={2} height_m={1} padding={1} {mouseX} {mouseY}>
 		<Image url="location.png" />
