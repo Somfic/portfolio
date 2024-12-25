@@ -14,6 +14,18 @@
 	let rotation = 0;
 
 	onMount(async () => {
+		setInterval(() => {
+			handleAudio();
+		}, 50);
+
+		setInterval(() => {
+			loadLatestSong();
+		}, 1000 * 60);
+
+		loadLatestSong();
+	});
+
+	async function loadLatestSong() {
 		let res = await fetch('https://api.stats.fm/api/v1/users/somfic/streams/recent');
 		let data = await res.json();
 		let track = data['items'][0]['track'];
@@ -24,11 +36,7 @@
 		playing.artist = track['artists']
 			.map((artist: { [x: string]: string }) => artist['name'])
 			.join(', ');
-
-		setInterval(() => {
-			handleAudio();
-		}, 50);
-	});
+	}
 
 	// Smoothly transition to the wantedAudio level based on if the audio wants to play
 	function handleAudio() {
