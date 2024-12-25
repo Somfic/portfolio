@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 
 	let playing = {
-		title: 'Loading...',
-		artist: 'Loading...',
-		image: 'https://via.placeholder.com/300',
+		title: '',
+		artist: '',
+		image: '#',
 		audio: '#',
 		fit: 'cover'
 	};
@@ -24,8 +24,6 @@
 		playing.artist = track['artists']
 			.map((artist: { [x: string]: string }) => artist['name'])
 			.join(', ');
-
-		console.log(track);
 
 		setInterval(() => {
 			handleAudio();
@@ -116,5 +114,6 @@
 		background-repeat: no-repeat;
 		border-radius: 1000px;
 		transition: transform 0.1s;
+		opacity: 0.7;
 	}
 </style>

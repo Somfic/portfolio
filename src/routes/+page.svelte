@@ -58,6 +58,13 @@
 	<Item width={9} width_m={8} height={1} {mouseX} {mouseY}>
 		<div class="experience">
 			<Experience
+				title="Full-stack software engineer"
+				location="Cofano"
+				image="cofano.png"
+				start="2024"
+				end="heden"
+			/>
+			<Experience
 				title="HBO Technische Informatica"
 				location="Avans Hogeschool"
 				image="avans.png"
