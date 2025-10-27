@@ -23,6 +23,7 @@
 		height: 100vh;
 		pointer-events: none;
 		position: relative;
+		scroll-snap-align: start;
 	}
 
 	.spacer::after {

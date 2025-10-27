@@ -5,6 +5,7 @@
 		min-height: 100vh;
 		display: flex;
 		justify-content: center;
+		scroll-snap-align: start;
 	}
 
 	article {
