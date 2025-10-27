@@ -23,11 +23,16 @@
 
 <style lang="scss">
 	.wrapper {
-		min-height: 100vh;
+		height: 100vh;
 		display: flex;
 		justify-content: center;
-		scroll-snap-align: start;
-		scroll-snap-stop: always;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+		pointer-events: none;
+		perspective: 1000px;
 	}
 
 	article {
@@ -38,6 +43,12 @@
 		border-radius: 20px;
 		position: relative;
 		overflow: hidden;
+		transition: transform 0.3s ease-out;
+		pointer-events: none;
+	}
+
+	:global(body.scrolled) .wrapper article {
+		transform: scale(0.95) rotateX(5deg);
 	}
 
 	.inner {

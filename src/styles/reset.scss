@@ -25,12 +25,14 @@ head {
 	display: none;
 }
 
-html body {
+html, body {
 	background-color: black;
 	color: rgb(254, 254, 255);
 	font-family: 'Zalando Sans', sans-serif;
 	line-height: 1.6;
 	font-weight: 300;
+	height: 100%;
+	overflow: hidden;
 }
 
 h1, h2 {

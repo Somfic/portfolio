@@ -3,9 +3,16 @@
 	let expanded = true;
 
 	onMount(() => {
-		document.onscroll = (e) => {
-			expanded = window.scrollY < 50;
-		};
+		const observer = new MutationObserver(() => {
+			expanded = !document.body.classList.contains('scrolled');
+		});
+
+		observer.observe(document.body, {
+			attributes: true,
+			attributeFilter: ['class']
+		});
+
+		return () => observer.disconnect();
 	});
 </script>
 
