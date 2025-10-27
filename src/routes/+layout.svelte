@@ -1,9 +1,9 @@
-<script>
+<script lang="ts">
 	import '../styles/reset.scss';
 	import Opener from '$components/sections/Opener.svelte';
 	import { onMount } from 'svelte';
 
-	let scrollContainer;
+	let scrollContainer: HTMLDivElement;
 
 	onMount(() => {
 		const handleScroll = () => {
@@ -31,18 +31,5 @@
 		overflow-x: hidden;
 		scroll-snap-type: y mandatory;
 		scroll-behavior: smooth;
-	}
-
-	.scroll-container::-webkit-scrollbar {
-		width: 8px;
-	}
-
-	.scroll-container::-webkit-scrollbar-track {
-		background: rgba(255, 255, 255, 0.1);
-	}
-
-	.scroll-container::-webkit-scrollbar-thumb {
-		background: rgba(255, 255, 255, 0.3);
-		border-radius: 4px;
 	}
 </style>
