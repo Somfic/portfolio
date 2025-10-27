@@ -29,7 +29,8 @@
 		height: 100vh;
 		overflow-y: auto;
 		overflow-x: hidden;
-		scroll-snap-type: y proximity;
+		scroll-snap-type: y mandatory;
+		scroll-behavior: smooth;
 	}
 
 	.scroll-container::-webkit-scrollbar {
