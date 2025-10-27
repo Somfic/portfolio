@@ -52,7 +52,7 @@
 			50% 50%,
 			50% 50%;
 
-		filter: blur(10px) saturate(180%) brightness(110%);
+		filter: blur(10px) saturate(180%) brightness(80%);
 
 		mask-image: radial-gradient(
 			ellipse at 100% 0%,
@@ -71,7 +71,7 @@
 			inset: 0;
 			background-image: var(--stripes2);
 			background-size: 280%, 160%;
-			animation: drift 25s ease-in-out infinite reverse;
+			animation: drift 60s ease-in-out infinite reverse;
 			mix-blend-mode: screen;
 			opacity: 0.4;
 		}

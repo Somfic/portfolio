@@ -7,7 +7,7 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" on:resize={onresize}>
 	<filter id="noise" x="0" y="0">
-		<feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" />
+		<feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="1" />
 		<feBlend mode="screen" />
 	</filter>
 	<rect {width} {height} filter="url(#noise)" />
@@ -18,7 +18,7 @@
 		position: absolute;
 		top: -5%;
 		left: -5%;
-		opacity: 0.1;
+		opacity: 0.01;
 		pointer-events: none;
 		width: 110%;
 		height: 110%;

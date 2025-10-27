@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Godrays from '$lib/Godrays.svelte';
-	import Grain from '$lib/Grain.svelte';
+	import Godrays from '$components/effects/Godrays.svelte';
+	import Grain from '$components/effects/Grain.svelte';
 	import Pattern from '$lib/Pattern.svelte';
 	import { onMount } from 'svelte';
 	import Item from '../grid/Item.svelte';
