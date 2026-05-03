@@ -1,10 +1,8 @@
-name: Deploy
+name: Check
 on:
   push:
-    branches: [main]
+  pull_request:
   workflow_dispatch:
-permissions:
-  contents: write
 
 jobs:
   client:
@@ -25,10 +23,3 @@ jobs:
 
       - name: Build
         run: bun run build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: build
-          commit-message: Compiled client
-          branch: deploy
